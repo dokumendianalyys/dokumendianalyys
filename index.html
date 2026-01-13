@@ -1,136 +1,112 @@
 <!DOCTYPE html>
-<html lang="et">
-<head>
-<meta charset="UTF-8">
-<title>Dokumendianalüüs</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f4f6f8;
-  color: #1a1a1a;
+@media (max-width: 900px) {
+.grid { grid-template-columns: 1fr; }
 }
 
-header {
-  background: #ffffff;
-  border-bottom: 1px solid #ddd;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #1a1a1a;
-}
-
-.hero {
-  display: flex;
-  max-width: 1200px;
-  margin: 60px auto;
-  gap: 40px;
-  padding: 0 40px;
-}
-
-.hero img {
-  width: 45%;
-  border-radius: 12px;
-}
-
-.hero-text {
-  width: 55%;
-}
-
-section {
-  max-width: 900px;
-  margin: 80px auto;
-  padding: 0 40px;
-}
-
-h1, h2 {
-  margin-bottom: 20px;
-}
 
 ul {
-  margin-left: 20px;
+padding-left: 20px;
+margin: 0;
+}
+
+
+li {
+margin-bottom: 10px;
+}
+
+
+footer {
+padding: 40px 20px;
+font-size: 0.9rem;
+color: var(--muted);
+text-align: center;
+}
+
+
+.contact {
+font-size: 1.05rem;
+}
+
+
+.email {
+font-weight: 600;
 }
 </style>
 </head>
-
 <body>
 
+
 <header>
-  <strong>Dokumendianalüüs</strong>
-  <nav>
-    <a href="#teenused">Teenused</a>
-    <a href="#sobivus">Kellele sobib</a>
-    <a href="#hinnad">Hinnad ja piirid</a>
-    <a href="#kkk">KKK</a>
-    <a href="#kontakt">Kontakt</a>
-    <a href="#">ET</a> | <a href="#">EN</a> | <a href="#">RU</a>
-  </nav>
+<div class="container hero">
+<div class="hero-text">
+<h1>Dokumendianalüüs ja selgitused</h1>
+<p>
+Aitan inimestel mõista ametlikke, juriidilisi ja meditsiinilisi dokumente,
+kui tekst on keeruline, segane või vastuoluline.
+</p>
+<p>
+Ma ei anna teooriat ega üldist nõu. Töötan konkreetse dokumendiga, mis sul on
+päriselt olemas, ja selgitan selle sisu loogiliselt, arusaadavalt ja samm-sammult.
+</p>
+<div class="buttons">
+<a href="#kontakt" class="btn btn-primary">Võta ühendust</a>
+<a href="#teenus" class="btn btn-secondary">Mida ma teen</a>
+</div>
+</div>
+<div class="hero-image">
+Siia tuleb sinu valitud pilt<br />
+(nt sama Eesti perekond erinevates olukordades)
+</div>
+</div>
 </header>
 
-<div class="hero">
-  <div class="hero-text">
-    <h1>AMETLIKE, JURIIDILISTE JA MEDITSIINILISTE DOKUMENTIDE SISULINE ANALÜÜS</h1>
 
-    <p>
-Kui sul on käes ametlik, juriidiline või meditsiiniline dokument
-ja sa ei saa päriselt aru, mida see sinu jaoks tähendab, siis ma aitan.
-    </p>
-
-    <p>
-Töötan konkreetsete dokumentidega, mitte üldiste küsimuste ega teooriaga.
-Selgitan sisu loogiliselt, samm-sammult ja arusaadavas keeles.
-    </p>
-
-    <p>
-Teenust osutan ainult kirjalikult (e-posti teel).
-    </p>
-  </div>
-
-  <img src="pere1.jpg" alt="Pere erinevad põlvkonnad">
+<section id="teenus">
+<div class="container grid">
+<div class="card">
+<h2>Usaldus ja koostöö</h2>
+<ul>
+<li>Selgitan dokumendi sisu arusaadavas keeles</li>
+<li>Toon välja vastuolud ja ebaselgused</li>
+<li>Aitan mõista, mida tekst tegelikult tähendab</li>
+<li>Ei eelda – lähtun ainult dokumendi sisust</li>
+</ul>
 </div>
 
-<section id="sobivus">
+
+<div class="card">
 <h2>Kellele see teenus sobib</h2>
-<ul>
-<li>kui panused on kõrged</li>
-<li>kui vajad selgust, mitte oletusi</li>
-<li>kui tahad teha teadlikke otsuseid</li>
-</ul>
-
-<h2>Kellele see EI sobi</h2>
-<ul>
-<li>tasuta vastuse otsijad</li>
-<li>kohtuesindamise soov</li>
-<li>„tee kõik minu eest“ hoiak</li>
-</ul>
+<p>
+Teenus on mõeldud inimestele, kes on saanud ametliku otsuse, lepingu,
+kohtudokumendi, arstitõendi või muu olulise teksti ning tunnevad, et nad ei saa
+sellest üksi aru.
+</p>
+<p>
+Vanus, sissetulek või taust ei ole oluline. Teenus on konfidentsiaalne.
+</p>
+</div>
+</div>
 </section>
 
-<section id="hinnad">
-<h2>Hinnad ja piirid</h2>
-<p>Käibemaksu ei lisandu. Teenuse osutamine toimub ettevõtluskonto kaudu.</p>
-
-<ul>
-<li>Ma ei anna õigusnõu</li>
-<li>Ma ei tee meditsiinilisi diagnoose</li>
-<li>Ma ei esinda kliente kohtus ega asutustes</li>
-<li>Lõpliku otsuse teeb alati klient ise</li>
-</ul>
-</section>
 
 <section id="kontakt">
-<h2>Kontakt</h2>
-<p>Teenust osutan ainult e-posti teel.</p>
-<p><strong>E-post:</strong> SIIA_PANE_OMA_EMAIL</p>
+<div class="container">
+<div class="card contact">
+<h2>Võta ühendust</h2>
+<p>
+Kui sul on konkreetne dokument ja soovid sellest aru saada, võta rahulikult
+ühendust.
+</p>
+<p class="email">📧 E-post: siia-paneme-hiljem@email.ee</p>
+</div>
+</div>
 </section>
+
+
+<footer>
+See leht ei paku õigus- ega meditsiiniteenust, vaid aitab dokumentide sisu mõista.
+</footer>
+
 
 </body>
 </html>
