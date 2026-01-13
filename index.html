@@ -2,38 +2,90 @@
 <html lang="et">
 <head>
   <meta charset="UTF-8" />
+  <title>Dokumendianalüüs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dokumentide sisuline analüüs</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f4f4;
+      color: #111;
+    }
+
+    .hero {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .text {
+      flex: 1;
+      padding: 60px;
+      background: #fff;
+    }
+
+    .image {
+      flex: 1;
+      background: url("https://images.unsplash.com/photo-1521791136064-7986c2920216")
+                  center / cover no-repeat;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    ul {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+      }
+
+      .image {
+        height: 250px;
+      }
+
+      .text {
+        padding: 30px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<main class="hero">
-  <div class="hero-text">
-    <h1>Dokumentide sisuline analüüs</h1>
+  <div class="hero">
+    <div class="text">
+      <h1>Ametlike, juriidiliste ja meditsiiniliste dokumentide sisuline analüüs</h1>
 
-    <p>
-      Aitan inimestel mõista ametlike, juriidiliste ja meditsiiniliste dokumentide tegelikku sisu.
-      Selgitan, mida dokument päriselt ütleb, mida see inimese olukorras tähendab
-      ja millised võivad olla selle tagajärjed.
-    </p>
+      <p>
+        Aitan inimesi, kellel on käes konkreetne dokument ja kes vajavad selle
+        mõistmiseks selget, loogilist ja arusaadavat selgitust.
+      </p>
 
-    <p>
-      Ma töötan konkreetsete dokumentidega, mitte üldiste küsimuste ega teoreetiliste näidetega.
-      Teen nõustamist <strong>ainult kirjalikult (e-posti teel)</strong>.
-    </p>
+      <p>
+        Töötan reaalsete dokumentidega, mitte üldiste küsimuste ega teooriaga.
+        Teenus on konfidentsiaalne ja kättesaadav kõigile – ma ei küsi sissetuleku suurust.
+      </p>
 
-    <p>
-      <strong>Ma ei küsi klientide sissetuleku suurust.</strong><br>
-      Teenus on mõeldud kõigile, kellel on käes dokument,
-      mille mõistmine mõjutab päriselt nende otsuseid.
-    </p>
+      <ul>
+        <li>sisu lahtimõtestamine</li>
+        <li>ebaselguste ja vastuolude selgitamine</li>
+        <li>praktiline arusaam, mitte oletused</li>
+      </ul>
+    </div>
+
+    <div class="image"></div>
   </div>
-
-  <div class="hero-image">
-    <img src="taust.jpg" alt="Neutraalne, abstraktne taust" />
-  </div>
-</main>
 
 </body>
 </html>
