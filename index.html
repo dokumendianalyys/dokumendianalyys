@@ -5,228 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ametlike dokumentide sisuline analüüs</title>
   <style>
-    :root {
-      --text: #1f2937;
-      --muted: #6b7280;
-      --bg: #ffffff;
-      --accent: #0f766e;
-      --soft: #f3f4f6;
-    }
-    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.6;
+      font-family: Arial, sans-serif;
     }
-    a { color: inherit; text-decoration: none; }
 
-    /* Header */
-    header {
-      border-bottom: 1px solid #e5e7eb;
-      background: #fff;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 40px;
+      border-bottom: 1px solid #ddd;
     }
-    .nav {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 16px 24px;
+
+    .top-nav nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
+
+    .hero {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 60px 40px;
+      gap: 40px;
     }
-    .logo {
-      font-weight: 700;
-      letter-spacing: 0.3px;
-    }
-    .menu {
-      display: flex;
-      gap: 24px;
-      font-size: 15px;
-    }
-    .menu a:hover { color: var(--accent); }
 
-    /* Hero */
-    .hero {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 64px 24px 48px;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 48px;
-      align-items: center;
+    .hero-text {
+      flex: 1;
     }
-    .hero h1 {
-      font-size: 34px;
-      line-height: 1.25;
-      margin: 0 0 16px 0;
-      font-weight: 700;
+
+    .hero-image {
+      flex: 1;
     }
-    .hero p {
-      margin: 0 0 16px 0;
-      color: var(--text);
-      max-width: 620px;
-    }
-    .hero ul {
-      padding-left: 18px;
-      margin: 16px 0 0 0;
-    }
-    .hero li { margin-bottom: 6px; }
-    .hero-img {
+
+    .hero-image img {
       width: 100%;
-      height: 420px;
       border-radius: 16px;
-      background: #e5e7eb url('pere.jpg') center/cover no-repeat;
     }
 
-    /* Section */
-    section {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 48px 24px;
-    }
-    .soft { background: var(--soft); }
-    h2 {
-      font-size: 26px;
-      margin: 0 0 24px 0;
+    h1 {
+      font-size: 32px;
+      margin-bottom: 16px;
     }
 
-    /* Two columns */
-    .cols {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-    }
-    .box {
-      background: #fff;
-      border-radius: 14px;
-      padding: 24px;
-    }
-    .box h3 { margin-top: 0; }
-    .box ul { padding-left: 18px; }
-    .box li { margin-bottom: 6px; }
-
-    /* CTA */
-    .cta {
-      text-align: center;
-      padding: 72px 24px;
-    }
-    .cta h2 { margin-bottom: 12px; }
-    .cta p {
-      max-width: 640px;
-      margin: 0 auto 24px;
-      color: var(--text);
-    }
-    .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      background: var(--accent);
-      color: #fff;
-      border-radius: 999px;
-      font-weight: 600;
+    p {
+      font-size: 18px;
+      line-height: 1.6;
     }
 
-    /* Footer */
-    footer {
-      border-top: 1px solid #e5e7eb;
-      padding: 24px;
-      text-align: center;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; }
-      .hero-img { height: 300px; }
-      .cols { grid-template-columns: 1fr; }
-      .menu { flex-wrap: wrap; gap: 16px; }
+    .top-nav nav a:hover {
+      color: #0f766e;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <div class="nav">
-    <div class="logo">Dokumendiselgus</div>
-    <nav class="menu">
-      <a href="#avaleht">Avaleht</a>
-      <a href="#mida">Mida ma teen</a>
-      <a href="#teenused">Teenused ja hinnad</a>
-      <a href="#minust">Minust</a>
-      <a href="#kkk">KKK</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
-  </div>
+<header class="top-nav">
+  <div class="logo">Dokumendiselgus</div>
+  <nav>
+    <a href="#avaleht">Avaleht</a>
+    <a href="#mida-ma-teen">Mida ma teen</a>
+    <a href="#teenused">Teenused ja hinnad</a>
+    <a href="#minust">Minust</a>
+    <a href="#kkk">KKK</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
 </header>
 
-<main id="avaleht">
-  <div class="hero">
-    <div>
-      <h1>Ametlike, juriidiliste ja meditsiiniliste dokumentide sisuline analüüs</h1>
-      <p>
-        See teenus on mõeldud inimestele, kellel on käes dokument ja kes vajavad selgust,
-        struktuuri ja korrektset sõnastust – mitte üldist infot või teooriat.
-      </p>
-      <p>
-        Töötan konkreetsete dokumentidega, mitte tüüpolukordadega. Kui sul on käes ametlik
-        dokument, otsus või menetlusmaterjal ja sa ei saa aru, mida see tegelikult tähendab,
-        siis minu töö on aidata sul sellest aru saada.
-      </p>
-      <ul>
-        <li>kas põhjendused on loogilised</li>
-        <li>kas järeldused tulenevad tõenditest</li>
-        <li>kus on vastuolud, lüngad või nõrgad kohad</li>
-      </ul>
-      <p>
-        See ei ole tasuta teenus ega pealiskaudne ülevaade. See on töö, mille eesmärk on
-        selgus – mis selles dokumendis täpselt öeldakse.
-      </p>
-    </div>
-    <div class="hero-img" aria-label="Perepilt"></div>
+<section id="avaleht" class="hero">
+  <div class="hero-text">
+    <h1>AMETLIKE, JURIIDILISTE JA MEDITSIINILISTE DOKUMENTIDE SISULINE ANALÜÜS, STRUKTUREERIMINE JA KORREKTNE KOOSTAMINE</h1>
+    <p>
+      See teenus on mõeldud inimestele, kellel on käes dokument ja kes vajavad
+      selgust, struktuuri ja korrektset sõnastust – mitte üldist infot ega teooriat.
+    </p>
+    <p>
+      Kui sul on käes ametlik dokument, otsus või menetlusmaterjal ja sa ei saa aru,
+      mida see tegelikult tähendab, siis minu töö on aidata sul sellest aru saada.
+    </p>
   </div>
 
-  <section class="soft">
-    <h2>Kellele see sobib / ei sobi</h2>
-    <div class="cols">
-      <div class="box">
-        <h3>Sobib</h3>
-        <ul>
-          <li>kui panused on kõrged</li>
-          <li>kui vajad selgust, mitte oletusi</li>
-          <li>kui tahad teha teadlikke otsuseid</li>
-          <li>kui sul on dokument olemas ja küsimused peas</li>
-        </ul>
-      </div>
-      <div class="box">
-        <h3>Ei sobi</h3>
-        <ul>
-          <li>kui otsid tasuta või pealiskaudset vastust</li>
-          <li>kui vajad kohtuesindust</li>
-          <li>kui soovid valmis lahendust ilma ise kaasa mõtlemata</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="cta">
-      <h2>Kui dokument tekitab segadust, ära jää üksi</h2>
-      <p>
-        Kui tunned, et ametlik tekst räägib sinust mööda, siis on see täpselt see koht,
-        kus ma saan aidata.
-      </p>
-      <a class="btn" href="#kontakt">Võta ühendust</a>
-    </div>
-  </section>
-</main>
-
-<footer>
-  © 2026 Dokumendiselgus · Teenus on eesti keeles, vajadusel ka vene ja inglise keeles
-</footer>
+  <div class="hero-image">
+    <img src="images/pere-avaleht.jpg" alt="Kolme põlvkonna pere">
+  </div>
+</section>
 
 </body>
 </html>
