@@ -2,51 +2,133 @@
 <html lang="et">
 <head>
 <meta charset="UTF-8">
-<title>Dokumentide sisuline analüüs</title>
+<title>Dokumentide sisuanalüüs</title>
 
 <style>
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
-  background: #eef1f3;
+  background-color: #eef1f3;
+  color: #222;
+}
+
+nav {
+  max-width: 1100px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lang button, nav button {
+  margin-right: 8px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  background: white;
+  cursor: pointer;
 }
 
 .hero {
-  background-image: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d");
+  background-image: url("https://images.unsplash.com/photo-1509099836639-18ba02c02a0d");
   background-size: cover;
-  padding: 80px 20px;
+  background-position: center;
+  padding: 100px 20px;
 }
 
-.box {
-  background: white;
+.hero-content {
   max-width: 900px;
   margin: auto;
+  background: rgba(255,255,255,0.95);
+  padding: 40px;
+  border-radius: 14px;
+}
+
+section {
+  display: none;
+  max-width: 1100px;
+  margin: 40px auto;
   padding: 30px;
-  border-radius: 12px;
+  background: white;
+  border-radius: 14px;
+}
+
+section.active {
+  display: block;
+}
+
+h1, h2 {
+  color: #1f3a4a;
 }
 </style>
+
+<script>
+function showSection(id) {
+  document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+}
+
+function setLang(lang) {
+  document.querySelectorAll("[data-lang]").forEach(el => {
+    el.style.display = el.dataset.lang === lang ? "block" : "none";
+  });
+}
+</script>
 </head>
 
-<body>
+<body onload="showSection('home'); setLang('et');">
+
+<nav>
+  <div class="lang">
+    <button onclick="setLang('et')">ET</button>
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('ru')">RU</button>
+  </div>
+  <div>
+    <button onclick="showSection('home')">Avaleht</button>
+    <button onclick="showSection('service')">Teenused</button>
+    <button onclick="showSection('contact')">Kontakt</button>
+  </div>
+</nav>
 
 <div class="hero">
-  <div class="box">
-    <h1>AMETLIKE, JURIIDILISTE JA MEDITSIINILISTE DOKUMENTIDE SISULINE ANALÜÜS</h1>
+  <div class="hero-content">
 
-    <p>
-      Teenuse eesmärk on aidata inimesi, kellel on käes konkreetne dokument ja kes vajavad selgust, struktuuri ja korrektset sõnastust.
-    </p>
+    <div data-lang="et">
+      <h1>AMETLIKE, JURIIDILISTE JA MEDITSIINILISTE DOKUMENTIDE SISUANALÜÜS</h1>
+      <p>Teenuse eesmärk on aidata inimesi, kelle käes on konkreetne dokument ning kes vajavad selgust, struktuuri ja korrektset sõnastust.</p>
+      <p>Ma ei paku üldist infot ega teooriat. Töötan reaalsete dokumentidega, mitte tüüpolukordadega.</p>
+      <p><strong>Teenuse kasutamine on konfidentsiaalne ja suunatud praktilisele vajadusele.</strong></p>
+    </div>
 
-    <p>
-      Ma ei paku üldist infot ega teooriat. Töötan reaalsete dokumentidega, mitte tüüpolukordadega.
-    </p>
+    <div data-lang="en" style="display:none">
+      <h1>CONTENT ANALYSIS OF OFFICIAL, LEGAL AND MEDICAL DOCUMENTS</h1>
+      <p>The goal of the service is to help people who have a specific document and need clarity, structure and correct wording.</p>
+      <p>I work with real documents, not general situations.</p>
+      <p><strong>The service is confidential and practical.</strong></p>
+    </div>
 
-    <p><strong>
-      Teenus on konfidentsiaalne ja suunatud praktilisele kasutusele.
-    </strong></p>
+    <div data-lang="ru" style="display:none">
+      <h1>АНАЛИЗ СОДЕРЖАНИЯ ОФИЦИАЛЬНЫХ, ЮРИДИЧЕСКИХ И МЕДИЦИНСКИХ ДОКУМЕНТОВ</h1>
+      <p>Цель услуги — помочь людям разобраться в конкретных документах.</p>
+      <p><strong>Работа конфиденциальна и практична.</strong></p>
+    </div>
+
   </div>
 </div>
 
+<section id="home" class="active"></section>
+
+<section id="service">
+  <h2>Teenused</h2>
+  <p>Dokumentide selgitamine, analüüs ja struktureerimine.</p>
+</section>
+
+<section id="contact">
+  <h2>Kontakt</h2>
+  <p>E-post: …</p>
+</section>
+
 </body>
 </html>
-💾 Salvesta.  <!-- deploy -->
