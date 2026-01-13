@@ -1,74 +1,86 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-  <meta charset="UTF-8">
-  <title>Dokumendianalüüs</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Dokumendianalüüs</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f2f4f6;
-      color: #1a1a1a;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f2f4f6;
+  color: #222;
+}
 
-    header {
-      background: url("people.jpg") center/cover no-repeat;
-      padding: 120px 20px;
-      text-align: center;
-    }
+/* NAV */
+nav {
+  max-width: 1100px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .box {
-      background: white;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px;
-      border-radius: 16px;
-    }
+nav .menu button {
+  margin-left: 8px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
 
-    h1 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
+/* HERO */
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1607746882042-944635dfe10e");
+  background-size: cover;
+  background-position: center;
+  padding: 140px 20px;
+}
 
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
+.hero-box {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 40px;
+  border-radius: 14px;
+}
 
-    nav {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
+h1 {
+  margin-top: 0;
+  font-size: 34px;
+}
 
-    nav button {
-      margin-left: 10px;
-      padding: 8px 14px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      background: white;
-      cursor: pointer;
-    }
-  </style>
+p {
+  line-height: 1.6;
+  font-size: 17px;
+}
+</style>
 </head>
 
 <body>
 
 <nav>
-  <button>ET</button>
-  <button>EN</button>
-  <button>RU</button>
+  <div class="lang">
+    <button>ET</button>
+    <button>EN</button>
+    <button>RU</button>
+  </div>
+  <div class="menu">
+    <button>Avaleht</button>
+    <button>Teenused</button>
+    <button>Kontakt</button>
+  </div>
 </nav>
 
-<header>
-  <div class="box">
+<section class="hero">
+  <div class="hero-box">
     <h1>AMETLIKE, JURIIDILISTE JA MEDITSIINILISTE DOKUMENTIDE SISULINE ANALÜÜS</h1>
 
     <p>
-      Teenuse eesmärk on aidata inimesi, kellel on käes konkreetne dokument
-      ja kes vajavad selgust, struktuuri ja korrektset sõnastust.
+      Teenuse eesmärk on aidata inimesi, kellel on käes konkreetne dokument ja kes vajavad
+      selgust, struktuuri ja korrektset sõnastust.
     </p>
 
     <p>
@@ -80,7 +92,7 @@
       Teenus on konfidentsiaalne ja suunatud praktilisele kasutusele.
     </strong></p>
   </div>
-</header>
+</section>
 
 </body>
 </html>
