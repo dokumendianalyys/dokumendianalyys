@@ -1,207 +1,68 @@
-<!DOCTYPE html>
-<html lang="et">
-<head>
-<meta charset="UTF-8">
-<title>Dokumendianalüüs – Reet Niitov</title>
-<style>
-body { font-family: Arial, sans-serif; max-width: 1100px; margin: auto; padding: 20px; line-height: 1.6; }
-nav button { margin: 5px; padding: 10px 15px; cursor: pointer; }
-section { display: none; margin-top: 30px; }
-section.active { display: block; }
-.lang button { margin-right: 10px; }
-h1, h2, h3 { margin-top: 30px; }
-ul { margin-left: 20px; }
-.warning { font-weight: bold; }
-</style>
-
-<script>
-function showSection(id) {
-  document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
-  document.getElementById(id).classList.add("active");
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 20px;
+  line-height: 1.7;
+  background-color: #f5f6f7;
+  color: #2e2e2e;
 }
 
-function setLang(lang) {
-  document.querySelectorAll("[data-lang]").forEach(el => {
-    el.style.display = el.getAttribute("data-lang") === lang ? "block" : "none";
-  });
+h1, h2, h3 {
+  color: #1f3a4a;
 }
-</script>
-</head>
 
-<body onload="showSection('avaleht'); setLang('et');">
+nav {
+  margin-top: 20px;
+}
 
-<div class="lang">
-  <button onclick="setLang('et')">Eesti</button>
-  <button onclick="setLang('en')">English</button>
-  <button onclick="setLang('ru')">Русский</button>
-</div>
+nav button {
+  margin: 5px 5px 0 0;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #e2eaee;
+  color: #1f3a4a;
+  cursor: pointer;
+  font-size: 14px;
+}
 
-<nav>
-  <button onclick="showSection('avaleht')">Avaleht</button>
-  <button onclick="showSection('teenused')">Teenused ja hinnad</button>
-  <button onclick="showSection('kuidas')">Kuidas teenus käib</button>
-  <button onclick="showSection('valdkonnad')">Valdkonnad</button>
-  <button onclick="showSection('piirid')">Piirid ja vastutus</button>
-  <button onclick="showSection('kiir')">Kiirmenetlus</button>
-  <button onclick="showSection('taust')">Minu taust</button>
-  <button onclick="showSection('kkk')">KKK</button>
-  <button onclick="showSection('kontakt')">Kontakt</button>
-</nav>
+nav button:hover {
+  background-color: #cfdde5;
+}
 
-<!-- AVALEHT -->
-<section id="avaleht" class="active">
-<div data-lang="et">
-<h1>AMETLIKE, JURIIDILISTE JA MEDITSIINILISTE DOKUMENTIDE SISULINE ANALÜÜS</h1>
-<p>Teenuse eesmärk on aidata inimesi, kellel on käes konkreetne dokument ja kes vajavad selgust, struktuuri ja korrektset sõnastust.</p>
-<p>Ma ei paku üldist infot ega teooriat. Töötan reaalsete dokumentidega, mitte tüüpolukordadega.</p>
-<p><strong>Teenus on konfidentsiaalne ja suunatud praktilisele kasutusele.</strong></p>
-</div>
-</section>
+section {
+  display: none;
+  margin-top: 40px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
 
-<!-- TEENUSED -->
-<section id="teenused">
-<div data-lang="et">
+section.active {
+  display: block;
+}
 
-<h2>KOHUSTUSLIK ESIMENE SAMM – ESMANE ANALÜÜS</h2>
-<p><strong>Hind: 20–25 €</strong></p>
-<p>Esmane analüüs on alati esimene samm. Ilma selleta edasi ei liiguta.</p>
+.lang {
+  margin-bottom: 15px;
+}
 
-<ul>
-<li>dokumendi(de) sisuline läbilugemine</li>
-<li>selgitus, mida dokument päriselt tähendab (ja mida mitte)</li>
-<li>kas dokument eeldab reageerimist ja millised on tähtajad</li>
-<li>kas ja kuidas on mõistlik edasi liikuda</li>
-</ul>
+.lang button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 6px;
+  border: 1px solid #cfdde5;
+  background-color: #ffffff;
+  cursor: pointer;
+}
 
-<p class="warning">Ei sisalda vastuse, vaide, kaebuse ega muu dokumendi koostamist.</p>
+.lang button:hover {
+  background-color: #eef3f6;
+}
 
-<h2>MEDITSIIINILISED DOKUMENDID (eraldi teenus)</h2>
-<p><strong>Hind: 15 € / üks terviseprobleem</strong></p>
-<p>Dokumentide arv ei ole piiratud, kui need käsitlevad sama probleemi.</p>
-
-<p>Lisatöö (valikuline):<br>
-kirja või vastuse koostamine arstile: +5 €</p>
-
-<p class="warning">Ma ei pane diagnoose ega tee raviotsuseid.</p>
-
-<h2>DOKUMENTIDE SISULINE ANALÜÜS (mitte meditsiin)</h2>
-<p><strong>Hind: alates 30 € / dokument</strong></p>
-
-<h2>VASTUSTE JA UUTE DOKUMENTIDE KOOSTAMINE</h2>
-<p><strong>Hind: alates 40 € / dokument</strong></p>
-
-<h2>MAHUKAD VAIDLUSED</h2>
-<p><strong>Esimene dokument: alates 400 €</strong></p>
-<p>Lisatööd: 50–80 € / dokument</p>
-
-<h3>Käibemaks</h3>
-<p>Hindadele ei lisandu käibemaksu. Teenus toimub ettevõtluskonto kaudu.</p>
-
-</div>
-</section>
-
-<!-- KUIDAS -->
-<section id="kuidas">
-<div data-lang="et">
-<h2>KUIDAS TEENUS KÄIB – ALGUSEST LÕPUNI</h2>
-
-<ol>
-<li>Saada kõik dokumendid e-posti teel</li>
-<li>Lisa lühike selgitus, millega on tegu</li>
-<li>Tee makse esmase analüüsi eest</li>
-<li>Pärast analüüsi otsustad, kas ja kuidas edasi liigume</li>
-</ol>
-
-<p>Ilma dokumente nägemata ei ole võimalik hinnata töö mahtu ega anda sisulist vastust.</p>
-</div>
-</section>
-
-<!-- VALDKONNAD -->
-<section id="valdkonnad">
-<div data-lang="et">
-<h2>VALDKONNAD, MILLEGA AITAN</h2>
-
-<ul>
-<li>Ametiasutuste otsused ja kirjad</li>
-<li>Kohtu- ja haldusdokumendid</li>
-<li>Elatis, lahutus, vara jagamine</li>
-<li>Töövõime hindamine ja vaidlused</li>
-<li>Meditsiinilised dokumendid (mitte ravi)</li>
-</ul>
-</div>
-</section>
-
-<!-- PIIRID -->
-<section id="piirid">
-<div data-lang="et">
-<h2>OLULISED PIIRID JA VASTUTUS</h2>
-
-<ul>
-<li>Ma ei anna õigusnõu</li>
-<li>Ma ei tee meditsiinilisi diagnoose</li>
-<li>Ma ei esinda kliente kohtus</li>
-</ul>
-
-<p>Dokumentide esitamise otsuse teeb alati klient ise.</p>
-</div>
-</section>
-
-<!-- KIIR -->
-<section id="kiir">
-<div data-lang="et">
-<h2>KIIRMENETLUS JA TÄHTAJAD</h2>
-
-<p>Tavapärane tööaeg: kuni 5 tööpäeva.</p>
-
-<p>Kiirmenetlus (kokkuleppel):</p>
-<ul>
-<li>72h: +50%</li>
-<li>48h: +75%</li>
-<li>24h: +100%</li>
-</ul>
-</div>
-</section>
-
-<!-- TAUST -->
-<section id="taust">
-<div data-lang="et">
-<h2>MINU TAUST</h2>
-
-<p><strong>Reet Niitov</strong></p>
-
-<ul>
-<li>Raamatupidamine ja dokumentatsioon</li>
-<li>Pangandus ja kliendinõustamine (Swedbank)</li>
-<li>Ametlik asjaajamine ja tähtaegadega töö</li>
-</ul>
-
-<p>Minu kompetents põhineb praktilisel vastutusrikkal tööl.</p>
-</div>
-</section>
-
-<!-- KKK -->
-<section id="kkk">
-<div data-lang="et">
-<h2>KKK</h2>
-
-<p><strong>Kas teenus on tasuta?</strong><br>Ei. Kõik töö on tasuline.</p>
-
-<p><strong>Kas see on õigusabi?</strong><br>Ei. Tegemist ei ole õigusnõuga.</p>
-
-<p><strong>Kas pean teadma, mida tahan?</strong><br>Ei. Piisab, kui sul on dokument ja vajad selgust.</p>
-</div>
-</section>
-
-<!-- KONTAKT -->
-<section id="kontakt">
-<div data-lang="et">
-<h2>KONTAKT</h2>
-
-<p>E-post: <strong>dokumendianalyys@outlook.com</strong></p>
-<p>Nimi: Reet Niitov</p>
-
-</div>
-</section>
-
-</body>
-</html>
+.warning {
+  font-weight: 600;
+  color: #7a1f1f;
+}
