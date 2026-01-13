@@ -2,243 +2,205 @@
 <html lang="et">
 <head>
 <meta charset="UTF-8">
-<title>Dokumendianalüüs</title>
+<title>Dokumendianalüüs – Reet Niitov</title>
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
-nav {
-    position: sticky;
-    top: 0;
-    background: #111;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-nav button {
-    background: #222;
-    color: #fff;
-    border: none;
-    padding: 8px 14px;
-    cursor: pointer;
-}
-nav button:hover {
-    background: #444;
-}
-section {
-    display: none;
-    padding: 30px;
-    max-width: 900px;
-    margin: auto;
-}
-section.active {
-    display: block;
-}
-h1, h2, h3 {
-    margin-top: 30px;
-}
-ul {
-    margin-left: 20px;
-}
+body { font-family: Arial, sans-serif; max-width: 1100px; margin: auto; padding: 20px; line-height: 1.6; }
+nav button { margin: 5px; padding: 10px 15px; cursor: pointer; }
+section { display: none; margin-top: 30px; }
+section.active { display: block; }
+.lang button { margin-right: 10px; }
+h1, h2, h3 { margin-top: 30px; }
+ul { margin-left: 20px; }
+.warning { font-weight: bold; }
 </style>
+
 <script>
 function showSection(id) {
-    document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
-    document.getElementById(id).classList.add("active");
+  document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+}
+
+function setLang(lang) {
+  document.querySelectorAll("[data-lang]").forEach(el => {
+    el.style.display = el.getAttribute("data-lang") === lang ? "block" : "none";
+  });
 }
 </script>
 </head>
 
-<body>
+<body onload="showSection('avaleht'); setLang('et');">
+
+<div class="lang">
+  <button onclick="setLang('et')">Eesti</button>
+  <button onclick="setLang('en')">English</button>
+  <button onclick="setLang('ru')">Русский</button>
+</div>
 
 <nav>
-<button onclick="showSection('avaleht')">Avaleht</button>
-<button onclick="showSection('teenused')">Teenused</button>
-<button onclick="showSection('hinnad')">Teenused ja hinnad</button>
-<button onclick="showSection('valdkonnad')">Valdkonnad</button>
-<button onclick="showSection('tooprotsess')">Töökorraldus</button>
-<button onclick="showSection('piirid')">Piirid ja vastutus</button>
-<button onclick="showSection('taust')">Minu taust</button>
-<button onclick="showSection('kkk')">KKK</button>
+  <button onclick="showSection('avaleht')">Avaleht</button>
+  <button onclick="showSection('teenused')">Teenused ja hinnad</button>
+  <button onclick="showSection('kuidas')">Kuidas teenus käib</button>
+  <button onclick="showSection('valdkonnad')">Valdkonnad</button>
+  <button onclick="showSection('piirid')">Piirid ja vastutus</button>
+  <button onclick="showSection('kiir')">Kiirmenetlus</button>
+  <button onclick="showSection('taust')">Minu taust</button>
+  <button onclick="showSection('kkk')">KKK</button>
+  <button onclick="showSection('kontakt')">Kontakt</button>
 </nav>
 
+<!-- AVALEHT -->
 <section id="avaleht" class="active">
-<h1>Abi ametlike, juriidiliste ja meditsiiniliste dokumentide mõistmisel ja koostamisel</h1>
-<p><strong>AMETLIKE, JURIIDILISTE JA MEDITSIINILISTE DOKUMENTIDE SISULINE ANALÜÜS, STRUKTUREERIMINE JA KORREKTNE KOOSTAMINE</strong></p>
-
-<p>
-See teenus on mõeldud inimestele, kellel on käes dokument ja kes vajavad selgust, struktuuri ja korrektset sõnastust, mitte üldist infot või teooriat.
-Töötan konkreetsete dokumentidega, mitte tüüpolukordadega.
-</p>
-
-<p>
-Riigi pakutav tasuta juturobot annab üldist infot – mõistete selgitusi, tüüpilisi vastuseid ja viiteid seadustele.
-See on abiks siis, kui inimene alles otsib, mis asi miski on.
-</p>
-
-<p>
-Minu töö algab seal, kus üldisest infost enam ei piisa:
-kui inimesel on konkreetne dokument käes ja on vaja aru saada,
-mida see tekst päriselt tema olukorras tähendab,
-millised kohad on sisulised, millised vormilised,
-kus on riskid.
-</p>
-
-<p>
-Minu poole võivad pöörduda kõik inimesed.
-Siin ei küsita sissetulekut, ei kontrollita õigust tasuta abile ega kehtestata piiranguid.
-Töö ei käi tüüpolukordade, vaid reaalsete dokumentidega.
-</p>
+<div data-lang="et">
+<h1>AMETLIKE, JURIIDILISTE JA MEDITSIINILISTE DOKUMENTIDE SISULINE ANALÜÜS</h1>
+<p>Teenuse eesmärk on aidata inimesi, kellel on käes konkreetne dokument ja kes vajavad selgust, struktuuri ja korrektset sõnastust.</p>
+<p>Ma ei paku üldist infot ega teooriat. Töötan reaalsete dokumentidega, mitte tüüpolukordadega.</p>
+<p><strong>Teenus on konfidentsiaalne ja suunatud praktilisele kasutusele.</strong></p>
+</div>
 </section>
 
+<!-- TEENUSED -->
 <section id="teenused">
-<h2>MIDA MA TEGELIKULT TEEN</h2>
+<div data-lang="et">
 
-<ul>
-<li>lahti mõtestan keerulisi ametlikke tekste</li>
-<li>ehitan neist loogilise ja arusaadava terviku</li>
-<li>sõnastan inimese olukorra korrektsesse ametlikku keelde</li>
-<li>koostan avaldusi, selgitusi, vastuseid, vaideid ja kaebusi</li>
-<li>tõlgin tavainimese info juriidiliselt ja halduslikult sobivasse vormi</li>
-</ul>
-
-<h3>MIDA MA EI PAKU</h3>
-<ul>
-<li>õigusnõu</li>
-<li>meditsiinilist diagnoosi</li>
-<li>raviotsuseid</li>
-<li>esindamist kohtus</li>
-</ul>
-
-<p>
-Ma pakun selgust, struktuuri ja korrektset sõnastust olukordades, kus eksimisruumi ei ole.
-Vaide ja kaebuse koostamine toimub kliendi antud faktide ja eesmärgi alusel ning ei kujuta endast õigusnõu ega hinnangut menetluse eduväljavaadetele.
-</p>
-</section>
-
-<section id="hinnad">
-<h2>TEENUSED JA HINNAD</h2>
-
-<h3>KOHUSTUSLIK ESIMENE SAMM – ESMANE ANALÜÜS</h3>
+<h2>KOHUSTUSLIK ESIMENE SAMM – ESMANE ANALÜÜS</h2>
 <p><strong>Hind: 20–25 €</strong></p>
-
-<p>
-Esmane analüüs on alati esimene samm. Ilma selleta edasi ei liiguta.
-</p>
+<p>Esmane analüüs on alati esimene samm. Ilma selleta edasi ei liiguta.</p>
 
 <ul>
-<li>sinu dokumendi(de) sisuline läbilugemine</li>
+<li>dokumendi(de) sisuline läbilugemine</li>
 <li>selgitus, mida dokument päriselt tähendab (ja mida mitte)</li>
-<li>info, kas dokument eeldab reageerimist ning millised on tähtajad ja riskid</li>
-<li>hinnang, kas ja kuidas on üldse mõistlik edasi liikuda</li>
+<li>kas dokument eeldab reageerimist ja millised on tähtajad</li>
+<li>kas ja kuidas on mõistlik edasi liikuda</li>
 </ul>
 
-<p><strong>Ei sisalda</strong> vastuse, vaide, kaebuse ega muu dokumendi koostamist.</p>
+<p class="warning">Ei sisalda vastuse, vaide, kaebuse ega muu dokumendi koostamist.</p>
 
-<h3>MEDITSIINILISED DOKUMENDID (ERALDI TEENUS)</h3>
-<p><strong>Hind: 15 € ühe terviseprobleemi kohta</strong></p>
+<h2>MEDITSIIINILISED DOKUMENDID (eraldi teenus)</h2>
+<p><strong>Hind: 15 € / üks terviseprobleem</strong></p>
+<p>Dokumentide arv ei ole piiratud, kui need käsitlevad sama probleemi.</p>
 
-<p>
-Dokumentide arv ei ole piiratud, kui need käsitlevad sama terviseprobleemi või raviperioodi.
-</p>
+<p>Lisatöö (valikuline):<br>
+kirja või vastuse koostamine arstile: +5 €</p>
 
-<p>Lisatöö (valikuline): kirja või vastuse koostamine arstile: +5 €</p>
+<p class="warning">Ma ei pane diagnoose ega tee raviotsuseid.</p>
 
-<p>⚠️ Ma ei pane diagnoose ega tee raviotsuseid.</p>
-
-<h3>DOKUMENTIDE SISULINE ANALÜÜS (MITTE MEDITSIIN)</h3>
+<h2>DOKUMENTIDE SISULINE ANALÜÜS (mitte meditsiin)</h2>
 <p><strong>Hind: alates 30 € / dokument</strong></p>
 
-<h3>VASTUSTE JA UUTE DOKUMENTIDE KOOSTAMINE</h3>
+<h2>VASTUSTE JA UUTE DOKUMENTIDE KOOSTAMINE</h2>
 <p><strong>Hind: alates 40 € / dokument</strong></p>
 
-<h3>MAHUKAD VAIDLUSED</h3>
-<p>
-Esimene kohtule esitatav dokument: <strong>alates 400 €</strong><br>
-Lisadokumendid: <strong>50–80 €</strong>
-</p>
+<h2>MAHUKAD VAIDLUSED</h2>
+<p><strong>Esimene dokument: alates 400 €</strong></p>
+<p>Lisatööd: 50–80 € / dokument</p>
 
-<h3>KIIRMENETLUS</h3>
-<ul>
-<li>72 tundi: +50%</li>
-<li>48 tundi: +75%</li>
-<li>24 tundi: +100%</li>
-</ul>
+<h3>Käibemaks</h3>
+<p>Hindadele ei lisandu käibemaksu. Teenus toimub ettevõtluskonto kaudu.</p>
 
-<p>Hindadele ei lisandu käibemaksu.</p>
+</div>
 </section>
 
+<!-- KUIDAS -->
+<section id="kuidas">
+<div data-lang="et">
+<h2>KUIDAS TEENUS KÄIB – ALGUSEST LÕPUNI</h2>
+
+<ol>
+<li>Saada kõik dokumendid e-posti teel</li>
+<li>Lisa lühike selgitus, millega on tegu</li>
+<li>Tee makse esmase analüüsi eest</li>
+<li>Pärast analüüsi otsustad, kas ja kuidas edasi liigume</li>
+</ol>
+
+<p>Ilma dokumente nägemata ei ole võimalik hinnata töö mahtu ega anda sisulist vastust.</p>
+</div>
+</section>
+
+<!-- VALDKONNAD -->
 <section id="valdkonnad">
+<div data-lang="et">
 <h2>VALDKONNAD, MILLEGA AITAN</h2>
 
-<h3>Ametlikud ja juriidilised dokumendid</h3>
 <ul>
-<li>ametiasutuste kirjad ja otsused</li>
-<li>haldusotsused ja määrused</li>
-<li>kohtuotsused ja kohtumäärused</li>
-<li>juristide ja notarite kirjad</li>
-<li>lepingud, kompromissid ja kokkulepped</li>
+<li>Ametiasutuste otsused ja kirjad</li>
+<li>Kohtu- ja haldusdokumendid</li>
+<li>Elatis, lahutus, vara jagamine</li>
+<li>Töövõime hindamine ja vaidlused</li>
+<li>Meditsiinilised dokumendid (mitte ravi)</li>
 </ul>
-
-<h3>Elatis, lahutus, vara jagamine, täitemenetlus</h3>
-
-<h3>Töövõime hindamine ja vaidlused</h3>
-
-<h3>Meditsiinilised dokumendid (mitte ravi)</h3>
+</div>
 </section>
 
-<section id="tooprotsess">
-<h2>ENNE ESIMEST PÖÖRDUMIST (OLULINE)</h2>
-
-<ul>
-<li>mis dokumendiga on tegu</li>
-<li>millises etapis asi on</li>
-<li>mis on sinu peamine küsimus või mure</li>
-<li>võimalusel asjakohased dokumendid lisas</li>
-</ul>
-
-<p>
-Ilma dokumente nägemata ei ole võimalik hinnata töö mahtu ega anda sisulist vastust.
-Kõik pöördumised vaadatakse läbi tasulise esmase analüüsi raames.
-</p>
-</section>
-
+<!-- PIIRID -->
 <section id="piirid">
-<h2>OLULISED PIIRID</h2>
+<div data-lang="et">
+<h2>OLULISED PIIRID JA VASTUTUS</h2>
 
 <ul>
-<li>Ma ei anna õigusnõu.</li>
-<li>Ma ei tee meditsiinilisi diagnoose ega raviotsuseid.</li>
-<li>Ma ei esinda kliente kohtus ega asutustes.</li>
+<li>Ma ei anna õigusnõu</li>
+<li>Ma ei tee meditsiinilisi diagnoose</li>
+<li>Ma ei esinda kliente kohtus</li>
 </ul>
+
+<p>Dokumentide esitamise otsuse teeb alati klient ise.</p>
+</div>
 </section>
 
+<!-- KIIR -->
+<section id="kiir">
+<div data-lang="et">
+<h2>KIIRMENETLUS JA TÄHTAJAD</h2>
+
+<p>Tavapärane tööaeg: kuni 5 tööpäeva.</p>
+
+<p>Kiirmenetlus (kokkuleppel):</p>
+<ul>
+<li>72h: +50%</li>
+<li>48h: +75%</li>
+<li>24h: +100%</li>
+</ul>
+</div>
+</section>
+
+<!-- TAUST -->
 <section id="taust">
+<div data-lang="et">
 <h2>MINU TAUST</h2>
 
+<p><strong>Reet Niitov</strong></p>
+
 <ul>
-<li>raamatupidamise ja dokumentatsiooni tehniline töö</li>
-<li>pangandus ja kliendinõustamine (Swedbank)</li>
-<li>administreerimine ja asjaajamine</li>
+<li>Raamatupidamine ja dokumentatsioon</li>
+<li>Pangandus ja kliendinõustamine (Swedbank)</li>
+<li>Ametlik asjaajamine ja tähtaegadega töö</li>
 </ul>
 
-<p>
-Minu kompetents ei põhine teoorial, vaid reaalsel ja vastutusrikkal tööl ametliku infoga.
-</p>
+<p>Minu kompetents põhineb praktilisel vastutusrikkal tööl.</p>
+</div>
 </section>
 
+<!-- KKK -->
 <section id="kkk">
-<h2>KKK – KORDUMA KIPPUVAD KÜSIMUSED</h2>
+<div data-lang="et">
+<h2>KKK</h2>
 
-<p><strong>Kas see teenus on tasuta?</strong><br>Ei. Kõik töö on tasuline.</p>
+<p><strong>Kas teenus on tasuta?</strong><br>Ei. Kõik töö on tasuline.</p>
 
-<p><strong>Kas see on õigusabi?</strong><br>Ei. Ma ei anna õigusnõu.</p>
+<p><strong>Kas see on õigusabi?</strong><br>Ei. Tegemist ei ole õigusnõuga.</p>
 
-<p><strong>Kas pean juba teadma, mida tahan teha?</strong><br>Ei. Piisab, kui sul on dokument ja vajad selgust.</p>
+<p><strong>Kas pean teadma, mida tahan?</strong><br>Ei. Piisab, kui sul on dokument ja vajad selgust.</p>
+</div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt">
+<div data-lang="et">
+<h2>KONTAKT</h2>
+
+<p>E-post: <strong>dokumendianalyys@outlook.com</strong></p>
+<p>Nimi: Reet Niitov</p>
+
+</div>
 </section>
 
 </body>
