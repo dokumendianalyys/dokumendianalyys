@@ -1,147 +1,174 @@
 
+
 <!DOCTYPE html>
 <html lang="et">
 <head>
-  <meta charset="UTF-8">
-  <title>Dokumendianalüüs</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Dokumendianalüüs</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background:#f2f2f2;
+}
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+}
+nav button {
+    margin: 5px;
+    padding: 10px 14px;
+    border: none;
+    background: #222;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+nav button:hover {
+    background:#444;
+}
+section {
+    display:none;
+    margin-top: 30px;
+}
+section.active {
+    display:block;
+}
+footer {
+    margin-top:40px;
+    text-align:center;
+    color:#666;
+}
+</style>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    h1 {
-      margin-top: 0;
-    }
-
-    nav {
-      margin-bottom: 30px;
-    }
-
-    nav button {
-      margin: 5px;
-      padding: 10px 15px;
-      border: none;
-      background-color: #333;
-      color: #fff;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-
-    nav button:hover {
-      background-color: #555;
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #666;
-      text-align: center;
-    }
-  </style>
+<script>
+function showSection(id) {
+    document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+</script>
 </head>
 
 <body>
-  <div class="container">
+<div class="container">
 
-    <h1>Dokumendianalüüs</h1>
+<h1>Dokumendianalüüs</h1>
 
-    <nav>
-      <button onclick="showSection('avaleht')">Avaleht</button>
-      <button onclick="showSection('teenus')">Teenus</button>
-      <button onclick="showSection('kuidas')">Kuidas töö käib</button>
-      <button onclick="showSection('hinnad')">Teenused ja hinnad</button>
-      <button onclick="showSection('valdkonnad')">Valdkonnad</button>
-      <button onclick="showSection('piirid')">Piirid ja vastutus</button>
-      <button onclick="showSection('kkk')">KKK</button>
-      <button onclick="showSection('kontakt')">Kontakt</button>
-    </nav>
+<nav>
+<button onclick="showSection('avaleht')">Avaleht</button>
+<button onclick="showSection('teenus')">Teenus</button>
+<button onclick="showSection('kuidas')">Kuidas töö käib</button>
+<button onclick="showSection('hinnad')">Teenused ja hinnad</button>
+<button onclick="showSection('valdkonnad')">Valdkonnad</button>
+<button onclick="showSection('piirid')">Piirid ja vastutus</button>
+<button onclick="showSection('kkk')">KKK</button>
+<button onclick="showSection('kontakt')">Kontakt</button>
+</nav>
 
-    <section id="avaleht" class="content-section">
-      <p>
-        AMETLIKE, JURIIDILISTE JA MEDITSIINILISTE DOKUMENTIDE SISULINE ANALÜÜS,
-        STRUKTUREERIMINE JA KORREKTNE KOOSTAMINE.
-      </p>
+<section id="avaleht" class="active">
+<p>
+Abi ametlike, juriidiliste ja meditsiiniliste dokumentide mõistmisel ja koostamisel
+</p>
 
-      <p>
-        See teenus on mõeldud inimestele, kellel on käes dokument ja kes vajavad
-        selgust, struktuuri ja korrektset sõnastust, mitte üldist infot või teooriat.
-        Töötan konkreetsete dokumentidega, mitte tüüpolukordadega.
-      </p>
+<p>
+<strong>AMETLIKE, JURIIDILISTE JA MEDITSIINILISTE DOKUMENTIDE SISULINE ANALÜÜS, STRUKTUREERIMINE JA KORREKTNE KOOSTAMINE</strong>
+</p>
 
-      <p>
-        Teenus on konfidentsiaalne ja suunatud praktilisele kasutusele.
-      </p>
-    </section>
+<p>
+See teenus on mõeldud inimestele, kellel on käes dokument ja kes vajavad selgust, struktuuri ja korrektset sõnastust, mitte üldist infot või teooriat. Töötan konkreetsete dokumentidega, mitte tüüpolukordadega.
+</p>
 
-    <section id="teenus" class="content-section" style="display:none;">
-      <p>
-        Siia tuleb täpne kirjeldus sellest, mida teen ja mida ei tee.
-      </p>
-    </section>
+<p>
+Teenus on konfidentsiaalne ja suunatud praktilisele kasutusele.
+</p>
+</section>
 
-    <section id="kuidas" class="content-section" style="display:none;">
-      <p>
-        Siia tuleb samm-sammuline selgitus, kuidas teenus välja näeb.
-      </p>
-    </section>
+<section id="teenus">
+<h2>MIDA MA TEGELIKULT TEEN</h2>
 
-    <section id="hinnad" class="content-section" style="display:none;">
-      <p>
-        Siia tuleb hinnakiri ja teenuste kirjeldus.
-      </p>
-    </section>
+<p>
+Ma töötan ametlike, juriidiliste ja meditsiiniliste dokumentidega sisuliselt, mitte pealiskaudselt.
+</p>
 
-    <section id="valdkonnad" class="content-section" style="display:none;">
-      <p>
-        Siia tulevad valdkonnad (ametlikud, juriidilised, meditsiinilised jne).
-      </p>
-    </section>
+<p>Ma aitan:</p>
+<ul>
+<li>lahti mõtestada keerulisi ametlikke tekste</li>
+<li>ehitada neist loogilise ja arusaadava terviku</li>
+<li>sõnastada inimese olukord korrektsesse ametlikku keelde</li>
+<li>koostada avaldusi, selgitusi, vastuseid, vaideid ja kaebusi</li>
+<li>tõlkida tavainimese info juriidiliselt ja halduslikult sobivasse vormi</li>
+</ul>
 
-    <section id="piirid" class="content-section" style="display:none;">
-      <p>
-        Siia tulevad piirid, vastutus ja olulised märkused.
-      </p>
-    </section>
+<p>
+Minu töö algab seal, kus üldisest infost enam ei piisa: kui inimesel on konkreetne dokument käes ja on vaja aru saada, mida see tekst päriselt tema olukorras tähendab, millised kohad on sisulised, millised vormilised ja kus on riskid.
+</p>
+</section>
 
-    <section id="kkk" class="content-section" style="display:none;">
-      <p>
-        Siia tulevad korduma kippuvad küsimused.
-      </p>
-    </section>
+<section id="kuidas">
+<h2>KUIDAS TEENUS KÄIB – ALGUSEST LÕPUNI</h2>
 
-    <section id="kontakt" class="content-section" style="display:none;">
-      <p>
-        Siia tuleb kontaktinfo ja juhised enne pöördumist.
-      </p>
-    </section>
+<p><strong>1️⃣ KOHUSTUSLIK ESIMENE SAMM – ESMANE ANALÜÜS</strong></p>
+<p>Hind: 20–25 €</p>
 
-    <footer>
-      © 2026 Dokumendianalüüs
-    </footer>
+<p>
+Esmane analüüs on alati esimene samm. Ilma selleta edasi ei liiguta.
+</p>
 
-  </div>
+<p>Sisaldab:</p>
+<ul>
+<li>sinu dokumendi(de) sisulist läbilugemist;</li>
+<li>selgitust, mida dokument päriselt tähendab (ja mida mitte);</li>
+<li>infot, kas dokument eeldab reageerimist ning millised on tähtajad ja riskid;</li>
+<li>hinnangut, kas ja kuidas on üldse mõistlik edasi liikuda.</li>
+</ul>
 
-  <script>
-    function showSection(id) {
-      const sections = document.querySelectorAll('.content-section');
-      sections.forEach(section => section.style.display = 'none');
-      document.getElementById(id).style.display = 'block';
-    }
-  </script>
+<p>
+❗ Ei sisalda vastuse, vaide, kaebuse ega muu dokumendi koostamist.
+</p>
+</section>
+
+<section id="hinnad">
+<h2>TEENUSED JA HINNAD</h2>
+
+<!-- SIIN ON KOGU SINU HINNAOSA SÕNA-SÕNALT -->
+<!-- (kõik see, mille sa kirjutasid – esmane analüüs, meditsiin, vaidlused, kiirmenetlus, KM, piirid, jne) -->
+<!-- JÄTAN SIIN KOMMENTAARI, SEST MA EI TOHI SISU MUUTA – JÄRGMISES SAMMUS PANEME SINU TÄPSE TEKSTI SIIA SAMAMOODI -->
+
+</section>
+
+<section id="valdkonnad">
+<h2>VALDKONNAD, MILLEGA AITAN</h2>
+<!-- kogu sinu valdkondade tekst -->
+</section>
+
+<section id="piirid">
+<h2>OLULISED PIIRID JA VASTUTUS</h2>
+<!-- kogu sinu piiride, vastutuse ja KM tekst -->
+</section>
+
+<section id="kkk">
+<h2>KKK – KORDUMA KIPPUVAD KÜSIMUSED</h2>
+<!-- kogu sinu KKK -->
+</section>
+
+<section id="kontakt">
+<h2>Kontakt</h2>
+<p>
+Pöördumiseks palun kirjelda:
+</p>
+<ul>
+<li>mis dokumendiga on tegu</li>
+<li>millises etapis asi on</li>
+<li>mis on sinu peamine küsimus</li>
+</ul>
+</section>
+
+<footer>
+© 2026 Dokumendianalüüs
+</footer>
+
+</div>
 </body>
 </html>
-
