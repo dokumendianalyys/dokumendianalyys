@@ -1,39 +1,32 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+<meta charset="UTF-8">
+<title>Dokumentide sisuline analüüs</title>
+
+<style>
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
   background-color: #eef1f3;
-  color: #222;
 }
 
-.lang, nav {
-  max-width: 1100px;
-  margin: auto;
+/* NAV */
+nav {
   padding: 15px 20px;
 }
 
-.lang button {
-  margin-right: 8px;
-  padding: 6px 12px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  background: white;
-  cursor: pointer;
-}
-
-nav button {
+.lang-buttons button,
+.menu-buttons button {
   margin: 5px 5px 0 0;
-  padding: 10px 16px;
+  padding: 8px 14px;
   border-radius: 6px;
   border: 1px solid #bbb;
   background: #f5f5f5;
   cursor: pointer;
 }
 
-nav button:hover {
-  background: #e0e0e0;
-}
-
-/* AVALEHE TAUST */
+/* HERO BACKGROUND */
 .hero {
   background-image: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d");
   background-size: cover;
@@ -41,28 +34,57 @@ nav button:hover {
   padding: 100px 20px;
 }
 
-/* VALGE TEKSTIPLOKK */
+/* WHITE CONTENT BOX */
 .hero-content {
   max-width: 900px;
-  margin: auto;
+  margin: 0 auto;
   background: rgba(255,255,255,0.95);
-  padding: 40px;
-  border-radius: 12px;
-}
-
-section {
-  display: none;
-  max-width: 1100px;
-  margin: 40px auto;
   padding: 30px;
-  background: white;
   border-radius: 12px;
 }
+</style>
 
-section.active {
-  display: block;
-}
+</head>
+<body>
 
-h1, h2 {
-  color: #1f3a4a;
-}
+<nav>
+  <div class="lang-buttons">
+    <button>Eesti</button>
+    <button>English</button>
+    <button>Русский</button>
+  </div>
+  <div class="menu-buttons">
+    <button>Avaleht</button>
+    <button>Teenused ja hinnad</button>
+    <button>Kuidas teenus käib</button>
+    <button>Valdkonnad</button>
+    <button>Piirid ja vastutus</button>
+    <button>Kiirmenetlus</button>
+    <button>Minu taust</button>
+    <button>KKK</button>
+    <button>Kontakt</button>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-content">
+
+    <h1>AMETLIKE, JURIIDILISTE JA MEDITSIINILISTE DOKUMENTIDE SISULINE ANALÜÜS</h1>
+
+    <p>
+      Teenuse eesmärk on aidata inimesi, kellel on käes konkreetne dokument ja kes vajavad selgust, struktuuri ja korrektset sõnastust.
+    </p>
+
+    <p>
+      Ma ei paku üldist infot ega teooriat. Töötan reaalsete dokumentidega, mitte tüüpolukordadega.
+    </p>
+
+    <p><strong>
+      Teenus on konfidentsiaalne ja suunatud praktilisele kasutusele.
+    </strong></p>
+
+  </div>
+</div>
+
+</body>
+</html>
