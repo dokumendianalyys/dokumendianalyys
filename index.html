@@ -4,159 +4,144 @@
 <head>
   <meta charset="UTF-8">
   <title>Dokumendianalüüs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f6f8;
+      background-color: #f4f4f4;
       margin: 0;
       padding: 0;
     }
-    header {
-      background: #1f2933;
-      color: white;
-      padding: 30px;
-      text-align: center;
-    }
-    nav {
-      background: #ffffff;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    nav button {
-      margin: 5px;
-      padding: 10px 18px;
-      border: none;
-      background: #1f2933;
-      color: white;
-      cursor: pointer;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-    nav button:hover {
-      background: #374151;
-    }
+
     .container {
       max-width: 900px;
       margin: 40px auto;
-      background: white;
+      background: #ffffff;
       padding: 30px;
-      border-radius: 6px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    section {
-      display: none;
+
+    h1 {
+      margin-top: 0;
     }
-    section.active {
-      display: block;
+
+    nav {
+      margin-bottom: 30px;
     }
+
+    nav button {
+      margin: 5px;
+      padding: 10px 15px;
+      border: none;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    nav button:hover {
+      background-color: #555;
+    }
+
     footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #666;
       text-align: center;
-      padding: 20px;
-      font-size: 13px;
-      color: #555;
     }
   </style>
-
-  <script>
-    function showSection(id) {
-      const sections = document.querySelectorAll("section");
-      sections.forEach(s => s.classList.remove("active"));
-      document.getElementById(id).classList.add("active");
-    }
-  </script>
 </head>
 
 <body>
+  <div class="container">
 
-<header>
-  <h1>Dokumendianalüüs</h1>
-  <p>AMETLIKE, JURIIDILISTE JA MEDITSIINILISTE DOKUMENTIDE SISULINE ANALÜÜS</p>
-</header>
+    <h1>Dokumendianalüüs</h1>
 
-<nav>
-  <button onclick="showSection('avaleht')">Avaleht</button>
-  <button onclick="showSection('mida')">Mida ma teen</button>
-  <button onclick="showSection('kellele')">Kellele sobib</button>
-  <button onclick="showSection('kuidas')">Kuidas töö käib</button>
-  <button onclick="showSection('hinnad')">Hinnakiri</button>
-  <button onclick="showSection('kontakt')">Kontakt</button>
-</nav>
+    <nav>
+      <button onclick="showSection('avaleht')">Avaleht</button>
+      <button onclick="showSection('teenus')">Teenus</button>
+      <button onclick="showSection('kuidas')">Kuidas töö käib</button>
+      <button onclick="showSection('hinnad')">Teenused ja hinnad</button>
+      <button onclick="showSection('valdkonnad')">Valdkonnad</button>
+      <button onclick="showSection('piirid')">Piirid ja vastutus</button>
+      <button onclick="showSection('kkk')">KKK</button>
+      <button onclick="showSection('kontakt')">Kontakt</button>
+    </nav>
 
-<div class="container">
+    <section id="avaleht" class="content-section">
+      <p>
+        AMETLIKE, JURIIDILISTE JA MEDITSIINILISTE DOKUMENTIDE SISULINE ANALÜÜS,
+        STRUKTUREERIMINE JA KORREKTNE KOOSTAMINE.
+      </p>
 
-<section id="avaleht" class="active">
-  <h2>Sisuline dokumendianalüüs</h2>
-  <p>
-    Ametlike, juriidiliste ja meditsiiniliste dokumentide sisuline analüüs,
-    struktureerimine ja korrektne koostamine.
-  </p>
-  <p>
-    Teenus on mõeldud inimestele, kellel on olemas konkreetne dokument
-    ja kes vajavad selgust, struktuuri ja korrektset sõnastust.
-  </p>
-  <p>
-    Teenus on konfidentsiaalne ja suunatud praktilisele kasutusele.
-  </p>
-</section>
+      <p>
+        See teenus on mõeldud inimestele, kellel on käes dokument ja kes vajavad
+        selgust, struktuuri ja korrektset sõnastust, mitte üldist infot või teooriat.
+        Töötan konkreetsete dokumentidega, mitte tüüpolukordadega.
+      </p>
 
-<section id="mida">
-  <h2>Mida ma teen</h2>
-  <p>
-    Töötan konkreetsete dokumentidega, mitte tüüpolukordadega.
-  </p>
-  <ul>
-    <li>dokumendi sisuline lahtiseletamine</li>
-    <li>oluliste punktide struktureerimine</li>
-    <li>ebaselguste ja vastuolude esiletoomine</li>
-    <li>korrektne ja selge ümbervormistamine</li>
-  </ul>
-</section>
+      <p>
+        Teenus on konfidentsiaalne ja suunatud praktilisele kasutusele.
+      </p>
+    </section>
 
-<section id="kellele">
-  <h2>Kellele see teenus sobib</h2>
-  <ul>
-    <li>eraisikutele</li>
-    <li>inimestele, kes suhtlevad ametkondadega</li>
-    <li>inimestele, kes ei saa dokumentide keelest aru</li>
-    <li>olukordades, kus on vaja täpsust ja selgust</li>
-  </ul>
-</section>
+    <section id="teenus" class="content-section" style="display:none;">
+      <p>
+        Siia tuleb täpne kirjeldus sellest, mida teen ja mida ei tee.
+      </p>
+    </section>
 
-<section id="kuidas">
-  <h2>Kuidas töö käib</h2>
-  <ol>
-    <li>Sa edastad dokumendi</li>
-    <li>Analüüsin selle sisu</li>
-    <li>Struktureerin ja sõnastan selgelt</li>
-    <li>Edastan arusaadava tulemuse</li>
-  </ol>
-</section>
+    <section id="kuidas" class="content-section" style="display:none;">
+      <p>
+        Siia tuleb samm-sammuline selgitus, kuidas teenus välja näeb.
+      </p>
+    </section>
 
-<section id="hinnad">
-  <h2>Hinnakiri</h2>
-  <p>
-    Hinnad sõltuvad dokumendi mahust ja keerukusest.
-  </p>
-  <p>
-    Täpne hind lepitakse kokku enne töö alustamist.
-  </p>
-</section>
+    <section id="hinnad" class="content-section" style="display:none;">
+      <p>
+        Siia tuleb hinnakiri ja teenuste kirjeldus.
+      </p>
+    </section>
 
-<section id="kontakt">
-  <h2>Kontakt</h2>
-  <p>
-    Huvi korral võta julgelt ühendust.
-  </p>
-  <p>
-    (kontaktandmed lisatakse)
-  </p>
-</section>
+    <section id="valdkonnad" class="content-section" style="display:none;">
+      <p>
+        Siia tulevad valdkonnad (ametlikud, juriidilised, meditsiinilised jne).
+      </p>
+    </section>
 
-</div>
+    <section id="piirid" class="content-section" style="display:none;">
+      <p>
+        Siia tulevad piirid, vastutus ja olulised märkused.
+      </p>
+    </section>
 
-<footer>
-  © 2026 Dokumendianalüüs
-</footer>
+    <section id="kkk" class="content-section" style="display:none;">
+      <p>
+        Siia tulevad korduma kippuvad küsimused.
+      </p>
+    </section>
 
+    <section id="kontakt" class="content-section" style="display:none;">
+      <p>
+        Siia tuleb kontaktinfo ja juhised enne pöördumist.
+      </p>
+    </section>
+
+    <footer>
+      © 2026 Dokumendianalüüs
+    </footer>
+
+  </div>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach(section => section.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
 </body>
 </html>
+
