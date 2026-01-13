@@ -1,98 +1,162 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Dokumendianalüüs</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #f2f4f6;
+      background-color: #f4f6f8;
       color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
 
     .hero {
       display: flex;
-      max-width: 1200px;
-      margin: 40px auto;
-      background: #ffffff;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
     }
 
     .hero-text {
       flex: 1;
-      padding: 40px;
+      min-width: 280px;
     }
 
-    .hero-text h1 {
-      font-size: 32px;
-      margin-top: 0;
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
     }
 
-    .hero-text p {
-      font-size: 16px;
-      line-height: 1.6;
+    h2 {
+      font-size: 22px;
+      margin-top: 40px;
+      margin-bottom: 12px;
     }
 
-    .hero-text ul {
-      padding-left: 20px;
+    p {
+      margin-bottom: 18px;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
     }
 
     .hero-image {
       flex: 1;
-      background-image: url("taust.jpg");
-      background-size: cover;
-      background-position: center;
-      min-height: 300px;
+      min-width: 280px;
     }
 
-    @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-      }
+    .hero-image img {
+      width: 100%;
+      border-radius: 8px;
+    }
 
-      .hero-image {
-        min-height: 200px;
-      }
+    .section {
+      margin-top: 60px;
+    }
+
+    .contact {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      margin-top: 60px;
+    }
+
+    .contact p {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #555;
     }
   </style>
 </head>
 
 <body>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Ametlike, juriidiliste ja meditsiiniliste dokumentide sisuline analüüs</h1>
+  <div class="container">
 
-      <p>
-        Aitan inimesi, kelle käes on konkreetne dokument ja kes vajavad selle
-        mõistmiseks selget, loogilist ja arusaadavat selgitust.
-      </p>
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Dokumendianalüüs ja selgitused</h1>
 
-      <p>
-        Töötan reaalsete dokumentidega – mitte üldiste küsimuste ega
-        teoreetiliste näidetega. Selgitan, mida dokument tegelikult ütleb,
-        millised on selle mõjud ja mida sellest saab või tuleb edasi teha.
-      </p>
+        <p>
+          Aitan inimestel mõista ametlikke, juriidilisi ja meditsiinilisi dokumente,
+          kui tekst on keeruline, segane või vastuoluline.
+        </p>
+
+        <p>
+          Ma ei anna teooriat ega üldist nõu. Töötan konkreetse dokumendiga,
+          mis sul on päriselt olemas, ja selgitan selle sisu loogiliselt,
+          arusaadavalt ja samm-sammult.
+        </p>
+      </div>
+
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216" alt="Usaldus ja koostöö">
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Mida ma teen</h2>
 
       <ul>
-        <li>sisu lahtimõtestamine ja selgitamine</li>
-        <li>ebaselguste ja vastuolude avamine</li>
-        <li>praktiline arusaam, mitte oletused</li>
+        <li>selgitan dokumendi sisu arusaadavas keeles</li>
+        <li>toon välja vastuolud ja ebaselgused</li>
+        <li>aitan mõista, mida tekst tegelikult tähendab</li>
+        <li>ei eelda – lähtun ainult dokumendi sisust</li>
       </ul>
+    </div>
+
+    <div class="section">
+      <h2>Kellele see teenus sobib</h2>
 
       <p>
-        Teenus on konfidentsiaalne, e-posti teel ning kättesaadav kõigile.
-        Ma ei küsi sissetulekut ega kontrolli rahalist tausta.
+        Teenus on mõeldud inimestele, kes on saanud ametliku otsuse, lepingu,
+        kohtudokumendi, arstitõendi või muu olulise teksti
+        ning tunnevad, et nad ei saa sellest üksi aru.
+      </p>
+
+      <p>
+        Vanus, sissetulek või taust ei ole oluline.
+        Teenus on konfidentsiaalne.
       </p>
     </div>
 
-    <div class="hero-image"></div>
-  </section>
+    <div class="contact">
+      <h2>Võta ühendust</h2>
+
+      <p>
+        Kui sul on konkreetne dokument ja soovid sellest aru saada,
+        võta rahulikult ühendust.
+      </p>
+
+      <p>
+        📧 E-post: <strong>siia-paneme-hiljem@email.ee</strong>
+      </p>
+    </div>
+
+    <footer>
+      <p>
+        See leht ei paku õigus- ega meditsiiniteenust,
+        vaid aitab dokumentide sisu mõista.
+      </p>
+    </footer>
+
+  </div>
 
 </body>
 </html>
