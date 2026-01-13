@@ -9,40 +9,45 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f4f4f4;
-      color: #111;
+      background-color: #f2f4f6;
+      color: #1a1a1a;
     }
 
     .hero {
       display: flex;
-      min-height: 100vh;
+      max-width: 1200px;
+      margin: 40px auto;
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
 
-    .text {
+    .hero-text {
       flex: 1;
-      padding: 60px;
-      background: #fff;
+      padding: 40px;
     }
 
-    .image {
-      flex: 1;
-      background: url("https://images.unsplash.com/photo-1521791136064-7986c2920216")
-                  center / cover no-repeat;
+    .hero-text h1 {
+      font-size: 32px;
+      margin-top: 0;
     }
 
-    h1 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 18px;
+    .hero-text p {
+      font-size: 16px;
       line-height: 1.6;
     }
 
-    ul {
-      font-size: 18px;
-      line-height: 1.6;
+    .hero-text ul {
+      padding-left: 20px;
+    }
+
+    .hero-image {
+      flex: 1;
+      background-image: url("taust.jpg");
+      background-size: cover;
+      background-position: center;
+      min-height: 300px;
     }
 
     @media (max-width: 768px) {
@@ -50,12 +55,8 @@
         flex-direction: column;
       }
 
-      .image {
-        height: 250px;
-      }
-
-      .text {
-        padding: 30px;
+      .hero-image {
+        min-height: 200px;
       }
     }
   </style>
@@ -63,29 +64,35 @@
 
 <body>
 
-  <div class="hero">
-    <div class="text">
+  <section class="hero">
+    <div class="hero-text">
       <h1>Ametlike, juriidiliste ja meditsiiniliste dokumentide sisuline analüüs</h1>
 
       <p>
-        Aitan inimesi, kellel on käes konkreetne dokument ja kes vajavad selle
+        Aitan inimesi, kelle käes on konkreetne dokument ja kes vajavad selle
         mõistmiseks selget, loogilist ja arusaadavat selgitust.
       </p>
 
       <p>
-        Töötan reaalsete dokumentidega, mitte üldiste küsimuste ega teooriaga.
-        Teenus on konfidentsiaalne ja kättesaadav kõigile – ma ei küsi sissetuleku suurust.
+        Töötan reaalsete dokumentidega – mitte üldiste küsimuste ega
+        teoreetiliste näidetega. Selgitan, mida dokument tegelikult ütleb,
+        millised on selle mõjud ja mida sellest saab või tuleb edasi teha.
       </p>
 
       <ul>
-        <li>sisu lahtimõtestamine</li>
-        <li>ebaselguste ja vastuolude selgitamine</li>
+        <li>sisu lahtimõtestamine ja selgitamine</li>
+        <li>ebaselguste ja vastuolude avamine</li>
         <li>praktiline arusaam, mitte oletused</li>
       </ul>
+
+      <p>
+        Teenus on konfidentsiaalne, e-posti teel ning kättesaadav kõigile.
+        Ma ei küsi sissetulekut ega kontrolli rahalist tausta.
+      </p>
     </div>
 
-    <div class="image"></div>
-  </div>
+    <div class="hero-image"></div>
+  </section>
 
 </body>
 </html>
