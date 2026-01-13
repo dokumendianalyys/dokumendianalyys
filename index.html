@@ -1,136 +1,194 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Dokumendianalüüs</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      color: #222;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f6f7;
+      color: #1a1a1a;
       line-height: 1.6;
     }
+
     header {
-      background: white;
-      padding: 60px 10%;
+      background: #ffffff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .hero {
       display: flex;
       gap: 40px;
       align-items: center;
+      flex-wrap: wrap;
     }
-    header .text {
+
+    .hero-text {
       flex: 1;
+      min-width: 280px;
     }
-    header h1 {
-      font-size: 40px;
+
+    .hero-text h1 {
+      font-size: 42px;
       margin-bottom: 20px;
     }
-    header p {
+
+    .hero-text p {
       font-size: 18px;
-      margin-bottom: 30px;
+      margin-bottom: 16px;
     }
+
+    .hero-image {
+      flex: 1;
+      min-width: 280px;
+      background: #ddd;
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #555;
+      font-size: 16px;
+      border-radius: 12px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
     .buttons a {
       display: inline-block;
-      margin-right: 15px;
-      padding: 12px 22px;
       background: #000;
-      color: white;
+      color: #fff;
+      padding: 14px 22px;
+      margin-right: 10px;
       text-decoration: none;
       border-radius: 6px;
       font-weight: bold;
     }
-    .image-placeholder {
-      flex: 1;
-      height: 300px;
-      background: #ddd;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #666;
-      font-size: 16px;
-      border-radius: 12px;
-    }
+
     section {
-      padding: 60px 10%;
-      background: white;
-      margin-top: 20px;
+      background: #ffffff;
+      margin-top: 30px;
+      padding: 40px 20px;
     }
+
     section h2 {
-      font-size: 28px;
+      font-size: 30px;
       margin-bottom: 20px;
     }
+
     ul {
       padding-left: 20px;
     }
+
     footer {
-      padding: 40px 10%;
-      background: #eee;
-      margin-top: 20px;
+      background: #ffffff;
+      margin-top: 40px;
+      padding: 30px 20px;
+      border-top: 1px solid #ddd;
+    }
+
+    .contact-box {
+      background: #f0f1f2;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
     }
   </style>
 </head>
-
 <body>
 
 <header>
-  <div class="text">
-    <h1>Dokumendianalüüs ja selgitused</h1>
-    <p>
-      Aitan inimestel mõista ametlikke, juriidilisi ja meditsiinilisi dokumente,
-      kui tekst on keeruline, segane või vastuoluline.
-    </p>
-    <p>
-      Ma ei anna teooriat ega üldist nõu. Töötan konkreetse dokumendiga,
-      mis sul on päriselt olemas, ja selgitan selle sisu loogiliselt,
-      arusaadavalt ja samm-sammult.
-    </p>
-    <div class="buttons">
-      <a href="#teenus">Mida ma teen</a>
-      <a href="#kontakt">Võta ühendust</a>
-    </div>
-  </div>
+  <div class="container hero">
+    <div class="hero-text">
+      <h1>AMETLIKE, JURIIDILISTE JA MEDITSIINILISTE DOKUMENTIDE SISULINE ANALÜÜS, STRUKTUREERIMINE JA KORREKTNE KOOSTAMINE</h1>
 
-  <div class="image-placeholder">
-    Siia tuleb perefoto (asendame hiljem)
+      <p>
+        See teenus on mõeldud inimestele, kellel on käes dokument ja kes vajavad
+        selgust, struktuuri ja korrektset sõnastust – mitte üldist infot ega teooriat.
+      </p>
+
+      <p>
+        Töötan konkreetsete dokumentidega, mitte tüüpolukordadega.
+        Teenust osutan ainult kirjalikult (e-posti teel).
+      </p>
+
+      <div class="buttons">
+        <a href="#teenused">Teenused ja hinnad</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      Siia tuleb sama perekonna foto (eri olukordades, 3 põlvkonda)
+    </div>
   </div>
 </header>
 
-<section id="teenus">
-  <h2>Usaldus ja koostöö</h2>
-  <ul>
-    <li>selgitan dokumendi sisu arusaadavas keeles</li>
-    <li>toon välja vastuolud ja ebaselgused</li>
-    <li>aitan mõista, mida tekst tegelikult tähendab</li>
-    <li>ei eelda – lähtun ainult dokumendi sisust</li>
-  </ul>
+<section id="teenused">
+  <div class="container">
+    <h2>Teenused ja hinnad</h2>
+
+    <p>
+      Ma ei anna õigusnõu ega meditsiinilisi diagnoose.
+      Aitan mõista dokumentide sisu ja loogikat ning vajadusel neid korrektselt sõnastada.
+    </p>
+
+    <p>
+      Käibemaks ei lisandu. Tegutsen ettevõtluskonto kaudu.
+      Teenus on mõeldud kõigile – ma ei küsi inimeste sissetulekute kohta.
+    </p>
+  </div>
 </section>
 
 <section>
-  <h2>Kellele see teenus sobib</h2>
-  <p>
-    Teenus on mõeldud inimestele, kes on saanud ametliku otsuse,
-    lepingu, kohtudokumendi, arstitõendi või muu olulise teksti
-    ning tunnevad, et nad ei saa sellest üksi aru.
-  </p>
-  <p>
-    Vanus, sissetulek või taust ei ole oluline. Teenus on konfidentsiaalne.
-  </p>
+  <div class="container">
+    <h2>Kellele see teenus sobib</h2>
+    <ul>
+      <li>kui panused on kõrged;</li>
+      <li>kui vajad selgust, mitte oletusi;</li>
+      <li>kui tahad teha teadlikke otsuseid.</li>
+    </ul>
+
+    <h2>Kellele see teenus ei sobi</h2>
+    <ul>
+      <li>kui otsid tasuta või pealiskaudset vastust;</li>
+      <li>kui vajad esindamist kohtus;</li>
+      <li>kui soovid valmis lahendust ilma ise kaasa mõtlemata.</li>
+    </ul>
+
+    <p>
+      Kui tunned, et dokument, mis sul käes on, ei ole asi, mida tahaksid ise katsetada,
+      oled tõenäoliselt õiges kohas.
+    </p>
+  </div>
 </section>
 
 <footer id="kontakt">
-  <h2>Võta ühendust</h2>
-  <p>
-    Kui sul on konkreetne dokument ja soovid sellest aru saada,
-    võta rahulikult ühendust.
-  </p>
-  <p>
-    📧 E-post: <strong>dokumendianalyys@outlook.com</strong>
-  </p>
-  <p style="margin-top:20px; font-size:14px;">
-    See leht ei paku õigus- ega meditsiiniteenust,
-    vaid aitab dokumentide sisu mõista.
-  </p>
+  <div class="container">
+    <div class="contact-box">
+      <h2>Kontakt</h2>
+      <p>
+        Kui sul on konkreetne dokument ja soovid sellest aru saada,
+        võta rahulikult ühendust.
+      </p>
+      <p>
+        📧 <strong>dokumendianalyys@outlook.com</strong>
+      </p>
+    </div>
+
+    <p style="margin-top:20px;font-size:14px;">
+      See teenus ei paku õigus- ega meditsiiniteenust, vaid aitab dokumentide sisu mõista.
+    </p>
+  </div>
 </footer>
 
 </body>
