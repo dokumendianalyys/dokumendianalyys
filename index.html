@@ -1,94 +1,75 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-    <meta charset="UTF-8">
-    <title>Dokumendianalüüs</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Dokumendianalüüs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)),
+      url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
 
-        body {
-            margin: 0;
-            background: #f2f5f7;
-            color: #1f2d3d;
-        }
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background: #ffffff;
-        }
+nav button {
+    margin-left: 10px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+}
 
-        nav button, .lang button {
-            margin-left: 10px;
-            padding: 8px 14px;
-            border: 1px solid #ccc;
-            background: #fff;
-            cursor: pointer;
-            border-radius: 6px;
-        }
+.lang button {
+    margin-right: 5px;
+}
 
-        nav button:hover, .lang button:hover {
-            background: #e9eef2;
-        }
+.main-box {
+    max-width: 900px;
+    margin: 80px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
 
-        .hero {
-            min-height: 70vh;
-            background-image:
-                linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-                url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d");
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 40px;
-        }
+h1 {
+    margin-top: 0;
+}
 
-        .content-box {
-            background: #ffffff;
-            max-width: 900px;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        }
+.hidden {
+    display: none;
+}
+</style>
 
-        h1 {
-            margin-top: 0;
-            font-size: 32px;
-        }
+<script>
+function showLang(lang) {
+    document.querySelectorAll(".lang-content").forEach(el => el.classList.add("hidden"));
+    document.getElementById(lang).classList.remove("hidden");
+}
+</script>
 
-        p {
-            font-size: 17px;
-            line-height: 1.6;
-        }
-
-        .bold {
-            font-weight: bold;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            font-size: 14px;
-            color: #666;
-        }
-    </style>
 </head>
 
 <body>
 
 <header>
     <div class="lang">
-        <button onclick="setLang('et')">ET</button>
-        <button onclick="setLang('en')">EN</button>
-        <button onclick="setLang('ru')">RU</button>
+        <button onclick="showLang('et')">ET</button>
+        <button onclick="showLang('en')">EN</button>
+        <button onclick="showLang('ru')">RU</button>
     </div>
 
     <nav>
@@ -98,82 +79,60 @@
     </nav>
 </header>
 
-<section class="hero">
-    <div class="content-box">
+<div class="main-box">
 
-        <!-- EESTI -->
-        <div id="et">
-            <h1>AMETLIKE, ÕIGUSLIKE JA MEDITSIINILISTE DOKUMENTIDE SISUANALÜÜS</h1>
+<!-- EESTI -->
+<div id="et" class="lang-content">
+<h1>AMETLIKE, JURIIDILISTE JA MEDITSIINILISTE DOKUMENTIDE SISULINE ANALÜÜS</h1>
 
-            <p>
-                Teenus on mõeldud inimestele, kelle käes on konkreetne dokument
-                ning kes vajavad selle sisu selgust, loogilist struktuuri
-                ja korrektset sõnastust.
-            </p>
+<p>
+Teenuse eesmärk on aidata inimesi, kellel on käes konkreetne dokument ja kes vajavad selgust, struktuuri ja korrektset sõnastust.
+</p>
 
-            <p>
-                Ma ei paku üldist infot ega teooriat.
-                Töötan päris dokumentidega, mitte tüüpolukordadega.
-            </p>
+<p>
+Ma ei paku üldist infot ega teooriat. Töötan reaalsete dokumentidega, mitte tüüpolukordadega.
+</p>
 
-            <p class="bold">
-                Teenus on konfidentsiaalne ja suunatud praktilistele vajadustele.
-            </p>
-        </div>
+<p><strong>
+Teenuse on konfidentsiaalne ja suunatud praktilisele kasutusele.
+</strong></p>
+</div>
 
-        <!-- ENGLISH -->
-        <div id="en" style="display:none;">
-            <h1>CONTENT ANALYSIS OF OFFICIAL, LEGAL AND MEDICAL DOCUMENTS</h1>
+<!-- ENGLISH -->
+<div id="en" class="lang-content hidden">
+<h1>CONTENT ANALYSIS OF OFFICIAL, LEGAL AND MEDICAL DOCUMENTS</h1>
 
-            <p>
-                The aim of the service is to help people who have a specific document
-                in their hands and who need clarity, structure, and correct wording.
-            </p>
+<p>
+The aim of the service is to help people who have a specific document in their hands and who need clarity, structure, and correct wording.
+</p>
 
-            <p>
-                I do not offer general information or theory.
-                I work with real documents, not typical situations.
-            </p>
+<p>
+I do not offer general information or theory. I work with real documents, not typical situations.
+</p>
 
-            <p class="bold">
-                Use of the service is confidential and aimed at practical needs.
-            </p>
-        </div>
+<p><strong>
+The service is confidential and aimed at practical needs.
+</strong></p>
+</div>
 
-        <!-- RUSSIAN -->
-        <div id="ru" style="display:none;">
-            <h1>АНАЛИЗ СОДЕРЖАНИЯ ОФИЦИАЛЬНЫХ, ЮРИДИЧЕСКИХ И МЕДИЦИНСКИХ ДОКУМЕНТОВ</h1>
+<!-- RUSSIAN -->
+<div id="ru" class="lang-content hidden">
+<h1>СОДЕРЖАТЕЛЬНЫЙ АНАЛИЗ ОФИЦИАЛЬНЫХ, ЮРИДИЧЕСКИХ И МЕДИЦИНСКИХ ДОКУМЕНТОВ</h1>
 
-            <p>
-                Услуга предназначена для людей, у которых на руках есть конкретный документ
-                и которым необходимы ясность, структура и корректная формулировка.
-            </p>
+<p>
+Цель услуги — помочь людям, у которых есть конкретный документ и которым необходимы ясность, структура и корректная формулировка.
+</p>
 
-            <p>
-                Я не предоставляю общую информацию или теорию.
-                Я работаю с реальными документами, а не с типовыми ситуациями.
-            </p>
+<p>
+Я не предоставляю общую информацию или теорию. Я работаю с реальными документами, а не с типовыми ситуациями.
+</p>
 
-            <p class="bold">
-                Услуга конфиденциальна и ориентирована на практические потребности.
-            </p>
-        </div>
+<p><strong>
+Услуга является конфиденциальной и ориентированной на практическое применение.
+</strong></p>
+</div>
 
-    </div>
-</section>
-
-<footer>
-    © Dokumendianalüüs
-</footer>
-
-<script>
-    function setLang(lang) {
-        document.getElementById("et").style.display = "none";
-        document.getElementById("en").style.display = "none";
-        document.getElementById("ru").style.display = "none";
-        document.getElementById(lang).style.display = "block";
-    }
-</script>
+</div>
 
 </body>
 </html>
