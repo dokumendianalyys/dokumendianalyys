@@ -1,138 +1,86 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-<meta charset="UTF-8">
-<title>Dokumendianalüüs</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Dokumendianalüüs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image:
-      linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)),
-      url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80");
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f2f4f6;
+      color: #1a1a1a;
+    }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
+    header {
+      background: url("people.jpg") center/cover no-repeat;
+      padding: 120px 20px;
+      text-align: center;
+    }
 
-nav button {
-    margin-left: 10px;
-    padding: 8px 14px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    background: white;
-    cursor: pointer;
-}
+    .box {
+      background: white;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px;
+      border-radius: 16px;
+    }
 
-.lang button {
-    margin-right: 5px;
-}
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
 
-.main-box {
-    max-width: 900px;
-    margin: 80px auto;
-    background: white;
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-}
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
 
-h1 {
-    margin-top: 0;
-}
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
 
-.hidden {
-    display: none;
-}
-</style>
-
-<script>
-function showLang(lang) {
-    document.querySelectorAll(".lang-content").forEach(el => el.classList.add("hidden"));
-    document.getElementById(lang).classList.remove("hidden");
-}
-</script>
-
+    nav button {
+      margin-left: 10px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background: white;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body>
 
+<nav>
+  <button>ET</button>
+  <button>EN</button>
+  <button>RU</button>
+</nav>
+
 <header>
-    <div class="lang">
-        <button onclick="showLang('et')">ET</button>
-        <button onclick="showLang('en')">EN</button>
-        <button onclick="showLang('ru')">RU</button>
-    </div>
+  <div class="box">
+    <h1>AMETLIKE, JURIIDILISTE JA MEDITSIINILISTE DOKUMENTIDE SISULINE ANALÜÜS</h1>
 
-    <nav>
-        <button>Home</button>
-        <button>Services</button>
-        <button>Contact</button>
-    </nav>
+    <p>
+      Teenuse eesmärk on aidata inimesi, kellel on käes konkreetne dokument
+      ja kes vajavad selgust, struktuuri ja korrektset sõnastust.
+    </p>
+
+    <p>
+      Ma ei paku üldist infot ega teooriat. Töötan reaalsete dokumentidega,
+      mitte tüüpolukordadega.
+    </p>
+
+    <p><strong>
+      Teenus on konfidentsiaalne ja suunatud praktilisele kasutusele.
+    </strong></p>
+  </div>
 </header>
-
-<div class="main-box">
-
-<!-- EESTI -->
-<div id="et" class="lang-content">
-<h1>AMETLIKE, JURIIDILISTE JA MEDITSIINILISTE DOKUMENTIDE SISULINE ANALÜÜS</h1>
-
-<p>
-Teenuse eesmärk on aidata inimesi, kellel on käes konkreetne dokument ja kes vajavad selgust, struktuuri ja korrektset sõnastust.
-</p>
-
-<p>
-Ma ei paku üldist infot ega teooriat. Töötan reaalsete dokumentidega, mitte tüüpolukordadega.
-</p>
-
-<p><strong>
-Teenuse on konfidentsiaalne ja suunatud praktilisele kasutusele.
-</strong></p>
-</div>
-
-<!-- ENGLISH -->
-<div id="en" class="lang-content hidden">
-<h1>CONTENT ANALYSIS OF OFFICIAL, LEGAL AND MEDICAL DOCUMENTS</h1>
-
-<p>
-The aim of the service is to help people who have a specific document in their hands and who need clarity, structure, and correct wording.
-</p>
-
-<p>
-I do not offer general information or theory. I work with real documents, not typical situations.
-</p>
-
-<p><strong>
-The service is confidential and aimed at practical needs.
-</strong></p>
-</div>
-
-<!-- RUSSIAN -->
-<div id="ru" class="lang-content hidden">
-<h1>СОДЕРЖАТЕЛЬНЫЙ АНАЛИЗ ОФИЦИАЛЬНЫХ, ЮРИДИЧЕСКИХ И МЕДИЦИНСКИХ ДОКУМЕНТОВ</h1>
-
-<p>
-Цель услуги — помочь людям, у которых есть конкретный документ и которым необходимы ясность, структура и корректная формулировка.
-</p>
-
-<p>
-Я не предоставляю общую информацию или теорию. Я работаю с реальными документами, а не с типовыми ситуациями.
-</p>
-
-<p><strong>
-Услуга является конфиденциальной и ориентированной на практическое применение.
-</strong></p>
-</div>
-
-</div>
 
 </body>
 </html>
