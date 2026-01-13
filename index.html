@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="et">
 <head>
@@ -6,52 +7,156 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
+      background: #f4f6f8;
       margin: 0;
       padding: 0;
-      color: #333;
+    }
+    header {
+      background: #1f2933;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+    nav {
+      background: #ffffff;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav button {
+      margin: 5px;
+      padding: 10px 18px;
+      border: none;
+      background: #1f2933;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    nav button:hover {
+      background: #374151;
     }
     .container {
-      max-width: 800px;
-      margin: 60px auto;
-      background: #ffffff;
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 6px;
     }
-    h1 {
-      margin-top: 0;
+    section {
+      display: none;
+    }
+    section.active {
+      display: block;
     }
     footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #666;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: #555;
     }
   </style>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(s => s.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
 </head>
+
 <body>
-  <div class="container">
-    <h1>Dokumendianalüüs</h1>
 
-    <p>
-Ametlike, juriidiliste ja meditsiiniliste dokumentide sisuline analüüs, struktureerimine ja korrektne koostamine.
-</p>
+<header>
+  <h1>Dokumendianalüüs</h1>
+  <p>AMETLIKE, JURIIDILISTE JA MEDITSIINILISTE DOKUMENTIDE SISULINE ANALÜÜS</p>
+</header>
 
-<p>
-Teenuse eesmärk on aidata inimesi, kelle käsutuses on konkreetne dokument ja kes vajavad selle mõistmiseks selgust, struktuuri ning korrektset sõnastust.
-</p>
+<nav>
+  <button onclick="showSection('avaleht')">Avaleht</button>
+  <button onclick="showSection('mida')">Mida ma teen</button>
+  <button onclick="showSection('kellele')">Kellele sobib</button>
+  <button onclick="showSection('kuidas')">Kuidas töö käib</button>
+  <button onclick="showSection('hinnad')">Hinnakiri</button>
+  <button onclick="showSection('kontakt')">Kontakt</button>
+</nav>
 
-<p>
-Teenust ei pakuta üldise info ega teoreetiliste selgituste andmiseks. Töötan konkreetsete dokumentidega, mitte tüüpolukordadega.
-</p>
+<div class="container">
 
-<p>
-<strong>Teenus on konfidentsiaalne ja suunatud praktilisele kasutusele.</strong>
-</p>
+<section id="avaleht" class="active">
+  <h2>Sisuline dokumendianalüüs</h2>
+  <p>
+    Ametlike, juriidiliste ja meditsiiniliste dokumentide sisuline analüüs,
+    struktureerimine ja korrektne koostamine.
+  </p>
+  <p>
+    Teenus on mõeldud inimestele, kellel on olemas konkreetne dokument
+    ja kes vajavad selgust, struktuuri ja korrektset sõnastust.
+  </p>
+  <p>
+    Teenus on konfidentsiaalne ja suunatud praktilisele kasutusele.
+  </p>
+</section>
 
-    <footer>
-      © 2026 Dokumendianalüüs
-    </footer>
-  </div>
+<section id="mida">
+  <h2>Mida ma teen</h2>
+  <p>
+    Töötan konkreetsete dokumentidega, mitte tüüpolukordadega.
+  </p>
+  <ul>
+    <li>dokumendi sisuline lahtiseletamine</li>
+    <li>oluliste punktide struktureerimine</li>
+    <li>ebaselguste ja vastuolude esiletoomine</li>
+    <li>korrektne ja selge ümbervormistamine</li>
+  </ul>
+</section>
+
+<section id="kellele">
+  <h2>Kellele see teenus sobib</h2>
+  <ul>
+    <li>eraisikutele</li>
+    <li>inimestele, kes suhtlevad ametkondadega</li>
+    <li>inimestele, kes ei saa dokumentide keelest aru</li>
+    <li>olukordades, kus on vaja täpsust ja selgust</li>
+  </ul>
+</section>
+
+<section id="kuidas">
+  <h2>Kuidas töö käib</h2>
+  <ol>
+    <li>Sa edastad dokumendi</li>
+    <li>Analüüsin selle sisu</li>
+    <li>Struktureerin ja sõnastan selgelt</li>
+    <li>Edastan arusaadava tulemuse</li>
+  </ol>
+</section>
+
+<section id="hinnad">
+  <h2>Hinnakiri</h2>
+  <p>
+    Hinnad sõltuvad dokumendi mahust ja keerukusest.
+  </p>
+  <p>
+    Täpne hind lepitakse kokku enne töö alustamist.
+  </p>
+</section>
+
+<section id="kontakt">
+  <h2>Kontakt</h2>
+  <p>
+    Huvi korral võta julgelt ühendust.
+  </p>
+  <p>
+    (kontaktandmed lisatakse)
+  </p>
+</section>
+
+</div>
+
+<footer>
+  © 2026 Dokumendianalüüs
+</footer>
+
 </body>
 </html>
