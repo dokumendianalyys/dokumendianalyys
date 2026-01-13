@@ -1,112 +1,137 @@
 <!DOCTYPE html>
-@media (max-width: 900px) {
-.grid { grid-template-columns: 1fr; }
-}
-
-
-ul {
-padding-left: 20px;
-margin: 0;
-}
-
-
-li {
-margin-bottom: 10px;
-}
-
-
-footer {
-padding: 40px 20px;
-font-size: 0.9rem;
-color: var(--muted);
-text-align: center;
-}
-
-
-.contact {
-font-size: 1.05rem;
-}
-
-
-.email {
-font-weight: 600;
-}
-</style>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dokumendianalüüs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      background: white;
+      padding: 60px 10%;
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+    header .text {
+      flex: 1;
+    }
+    header h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    header p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    .buttons a {
+      display: inline-block;
+      margin-right: 15px;
+      padding: 12px 22px;
+      background: #000;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    .image-placeholder {
+      flex: 1;
+      height: 300px;
+      background: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 16px;
+      border-radius: 12px;
+    }
+    section {
+      padding: 60px 10%;
+      background: white;
+      margin-top: 20px;
+    }
+    section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    footer {
+      padding: 40px 10%;
+      background: #eee;
+      margin-top: 20px;
+    }
+  </style>
 </head>
+
 <body>
 
-
 <header>
-<div class="container hero">
-<div class="hero-text">
-<h1>Dokumendianalüüs ja selgitused</h1>
-<p>
-Aitan inimestel mõista ametlikke, juriidilisi ja meditsiinilisi dokumente,
-kui tekst on keeruline, segane või vastuoluline.
-</p>
-<p>
-Ma ei anna teooriat ega üldist nõu. Töötan konkreetse dokumendiga, mis sul on
-päriselt olemas, ja selgitan selle sisu loogiliselt, arusaadavalt ja samm-sammult.
-</p>
-<div class="buttons">
-<a href="#kontakt" class="btn btn-primary">Võta ühendust</a>
-<a href="#teenus" class="btn btn-secondary">Mida ma teen</a>
-</div>
-</div>
-<div class="hero-image">
-Siia tuleb sinu valitud pilt<br />
-(nt sama Eesti perekond erinevates olukordades)
-</div>
-</div>
+  <div class="text">
+    <h1>Dokumendianalüüs ja selgitused</h1>
+    <p>
+      Aitan inimestel mõista ametlikke, juriidilisi ja meditsiinilisi dokumente,
+      kui tekst on keeruline, segane või vastuoluline.
+    </p>
+    <p>
+      Ma ei anna teooriat ega üldist nõu. Töötan konkreetse dokumendiga,
+      mis sul on päriselt olemas, ja selgitan selle sisu loogiliselt,
+      arusaadavalt ja samm-sammult.
+    </p>
+    <div class="buttons">
+      <a href="#teenus">Mida ma teen</a>
+      <a href="#kontakt">Võta ühendust</a>
+    </div>
+  </div>
+
+  <div class="image-placeholder">
+    Siia tuleb perefoto (asendame hiljem)
+  </div>
 </header>
 
-
 <section id="teenus">
-<div class="container grid">
-<div class="card">
-<h2>Usaldus ja koostöö</h2>
-<ul>
-<li>Selgitan dokumendi sisu arusaadavas keeles</li>
-<li>Toon välja vastuolud ja ebaselgused</li>
-<li>Aitan mõista, mida tekst tegelikult tähendab</li>
-<li>Ei eelda – lähtun ainult dokumendi sisust</li>
-</ul>
-</div>
-
-
-<div class="card">
-<h2>Kellele see teenus sobib</h2>
-<p>
-Teenus on mõeldud inimestele, kes on saanud ametliku otsuse, lepingu,
-kohtudokumendi, arstitõendi või muu olulise teksti ning tunnevad, et nad ei saa
-sellest üksi aru.
-</p>
-<p>
-Vanus, sissetulek või taust ei ole oluline. Teenus on konfidentsiaalne.
-</p>
-</div>
-</div>
+  <h2>Usaldus ja koostöö</h2>
+  <ul>
+    <li>selgitan dokumendi sisu arusaadavas keeles</li>
+    <li>toon välja vastuolud ja ebaselgused</li>
+    <li>aitan mõista, mida tekst tegelikult tähendab</li>
+    <li>ei eelda – lähtun ainult dokumendi sisust</li>
+  </ul>
 </section>
 
-
-<section id="kontakt">
-<div class="container">
-<div class="card contact">
-<h2>Võta ühendust</h2>
-<p>
-Kui sul on konkreetne dokument ja soovid sellest aru saada, võta rahulikult
-ühendust.
-</p>
-<p class="email">📧 E-post: siia-paneme-hiljem@email.ee</p>
-</div>
-</div>
+<section>
+  <h2>Kellele see teenus sobib</h2>
+  <p>
+    Teenus on mõeldud inimestele, kes on saanud ametliku otsuse,
+    lepingu, kohtudokumendi, arstitõendi või muu olulise teksti
+    ning tunnevad, et nad ei saa sellest üksi aru.
+  </p>
+  <p>
+    Vanus, sissetulek või taust ei ole oluline. Teenus on konfidentsiaalne.
+  </p>
 </section>
 
-
-<footer>
-See leht ei paku õigus- ega meditsiiniteenust, vaid aitab dokumentide sisu mõista.
+<footer id="kontakt">
+  <h2>Võta ühendust</h2>
+  <p>
+    Kui sul on konkreetne dokument ja soovid sellest aru saada,
+    võta rahulikult ühendust.
+  </p>
+  <p>
+    📧 E-post: <strong>dokumendianalyys@outlook.com</strong>
+  </p>
+  <p style="margin-top:20px; font-size:14px;">
+    See leht ei paku õigus- ega meditsiiniteenust,
+    vaid aitab dokumentide sisu mõista.
+  </p>
 </footer>
-
 
 </body>
 </html>
