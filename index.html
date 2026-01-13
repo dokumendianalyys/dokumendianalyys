@@ -4,51 +4,189 @@
     <meta charset="UTF-8">
     <title>Dokumendianalüüs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
 
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background-color: #ffffff;
+        }
+
+        /* ÜLEMINE RIBA */
+        header {
+            border-bottom: 1px solid #ddd;
+            background: #fff;
+        }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* SISU */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .hero img {
+            width: 100%;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 26px;
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .analysis-list li {
+            margin-bottom: 6px;
+        }
+
+        /* SOBIB / EI SOBI */
+        .columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .box {
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
+        .box h3 {
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        footer {
+            border-top: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-top: 60px;
+        }
+
+        /* MOBIIL */
+        @media (max-width: 800px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .columns {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
 <body>
 
 <header>
-    <div class="container">
+    <div class="header-inner">
         <h1>Dokumendianalüüs</h1>
-
         <nav>
             <ul>
                 <li><a href="index.html">Avaleht</a></li>
-                <li><a href="mida-ma-teen.html">Mida ma teen</a></li>
-                <li><a href="teenused-ja-hinnad.html">Teenused ja hinnad</a></li>
-                <li><a href="minust.html">Minust</a></li>
-                <li><a href="kkk.html">KKK</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="#mida-teen">Mida ma teen</a></li>
+                <li><a href="#teenused">Teenused ja hinnad</a></li>
+                <li><a href="#minust">Minust</a></li>
+                <li><a href="#kkk">KKK</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<main>
+<div class="container">
 
-    <!-- SISSEJUHATUS -->
-    <section>
-        <p>
-            See teenus on mõeldud inimestele, kellel on käes dokument ja kes vajavad selgust,
-            struktuuri ja korrektset sõnastust – mitte üldist infot või teooriat.
-        </p>
+    <!-- HERO -->
+    <section class="hero">
+        <div>
+            <h2>Abi ametlike dokumentide mõistmisel</h2>
 
-        <p>
-            Töötan konkreetsete dokumentidega, mitte tüüpolukordadega.
-        </p>
+            <p>
+                See teenus on mõeldud inimestele, kellel on käes dokument ja kes vajavad
+                <strong>selgust, struktuuri ja korrektset sõnastust</strong>,
+                mitte üldist infot või teooriat.
+            </p>
 
-        <p>
-            Kui sul on käes ametlik dokument, otsus või menetlusmaterjal ja sa ei saa aru,
-            mida see tegelikult tähendab, siis minu töö on aidata sul sellest aru saada.
-        </p>
+            <p>
+                Töötan <strong>konkreetsete dokumentidega</strong>, mitte tüüpolukordadega.
+            </p>
+
+            <p>
+                Kui sul on käes ametlik dokument, otsus või menetlusmaterjal ja sa ei saa aru,
+                mida see tegelikult tähendab, siis minu töö on aidata sul sellest aru saada.
+            </p>
+        </div>
+
+        <!-- PILT -->
+        <img src="pilt.jpg" alt="Perekond erinevates eluetappides">
     </section>
 
-    <!-- MIDA MA TEGELIKULT TEEN -->
-    <section>
+    <!-- ANALÜÜS -->
+    <section id="mida-teen">
+        <h2>Mida ma tegelikult teen</h2>
+
         <p>Ma analüüsin dokumente sisuliselt:</p>
 
-        <ul>
+        <ul class="analysis-list">
             <li>kas põhjendused on loogilised</li>
             <li>kas järeldused tulenevad tõenditest</li>
             <li>kus on vastuolud, lüngad või nõrgad kohad</li>
@@ -56,53 +194,41 @@
 
         <p>
             See ei ole tasuta teenus ega pealiskaudne ülevaade.
-        </p>
-
-        <p>
-            See on töö, mille eesmärk on selgus, mis selles dokumendis täpselt öeldakse.
+            See on töö, mille eesmärk on selgus – mis selles dokumendis täpselt öeldakse.
         </p>
     </section>
 
-    <!-- KELLELE SOBIB -->
-    <section>
-        <h2>Kellele see sobib</h2>
+    <!-- SOBIB / EI SOBI -->
+    <section class="columns">
+        <div class="box">
+            <h3>Kellele see sobib</h3>
+            <ul>
+                <li>kui panused on kõrged</li>
+                <li>kui vajad selgust, mitte oletusi</li>
+                <li>kui tahad teha teadlikke otsuseid</li>
+                <li>kui sul on dokument olemas ja küsimused peas</li>
+            </ul>
+        </div>
 
-        <ul>
-            <li>kui panused on kõrged</li>
-            <li>kui vajad selgust, mitte oletusi</li>
-            <li>kui tahad teha teadlikke otsuseid</li>
-            <li>kui sul on dokument olemas ja küsimused peas</li>
-        </ul>
+        <div class="box">
+            <h3>Kellele see ei sobi</h3>
+            <ul>
+                <li>kui otsid tasuta või pealiskaudset vastust</li>
+                <li>kui vajad kohtuesindust</li>
+                <li>kui soovid valmis lahendust ilma ise kaasa mõtlemata</li>
+            </ul>
+        </div>
     </section>
 
-    <!-- KELLELE EI SOBI -->
-    <section>
-        <h2>Kellele see ei sobi</h2>
+    <p style="margin-top: 30px;">
+        Kui tunned, et dokument, mis sul käes on, ei ole asi,
+        mida tahaksid ise katsetada, oled tõenäoliselt õiges kohas.
+    </p>
 
-        <ul>
-            <li>kui otsid tasuta või pealiskaudset vastust</li>
-            <li>kui vajad kohtuesindust</li>
-            <li>kui soovid valmis lahendust ilma ise kaasa mõtlemata</li>
-        </ul>
-    </section>
-
-    <!-- LÕPULAUSE -->
-    <section>
-        <p>
-            Kui tunned, et dokument, mis sul käes on, ei ole asi, mida tahaksid ise katsetada,
-            oled tõenäoliselt õiges kohas.
-        </p>
-    </section>
-
-    <!-- PEREKONNA PILT -->
-    <section>
-        <!-- Siia tuleb perekonna pilt -->
-    </section>
-
-</main>
+</div>
 
 <footer>
-    <p>© Dokumendianalüüs</p>
+    © Dokumendianalüüs
 </footer>
 
 </body>
