@@ -1,152 +1,183 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-  <meta charset="UTF-8">
-  <title>Dokumendianalüüs</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      line-height: 1.6;
-      color: #222;
-    }
-    header {
-      background: #fff;
-      border-bottom: 1px solid #ddd;
-      padding: 15px 30px;
-      position: sticky;
-      top: 0;
-    }
-    nav a {
-      margin-right: 20px;
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-    }
-    section {
-      padding: 60px 30px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h1, h2 {
-      margin-top: 0;
-    }
-    .hero {
-      display: flex;
-      gap: 40px;
-      align-items: center;
-    }
-    .hero img {
-      width: 40%;
-      background: #eee;
-    }
-    footer {
-      border-top: 1px solid #ddd;
-      padding: 30px;
-      text-align: center;
-      font-size: 14px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Dokumendianalüüs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: #222;
+        }
+        header {
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-top: 50px;
+        }
+        h3 {
+            font-size: 18px;
+            margin-top: 25px;
+        }
+        p, li {
+            font-size: 16px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .two-col {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .col {
+            flex: 1;
+            min-width: 280px;
+        }
+        .highlight {
+            background: #f4f4f4;
+            padding: 20px;
+        }
+    </style>
 </head>
-
 <body>
 
 <header>
-  <nav>
-    <a href="#avaleht">Avaleht</a>
-    <a href="#teenused">Teenused ja hinnad</a>
-    <a href="#sobivus">Kellele sobib</a>
-    <a href="#kkk">KKK</a>
-    <a href="#minust">Minust</a>
-    <a href="#kontakt">Kontakt</a>
-  </nav>
-</header>
 
-<section id="avaleht">
-  <div class="hero">
-    <div>
-      <h1>Dokumendianalüüs ja selgitused</h1>
-      <p>
-        Aitan inimestel mõista ametlikke, juriidilisi ja meditsiinilisi dokumente,
-        kui tekst on keeruline, segane või vastuoluline.
-      </p>
-      <p>
-        Ma ei anna teooriat ega üldist nõu. Töötan konkreetse dokumendiga,
-        mis sul on päriselt olemas, ja selgitan selle sisu loogiliselt,
-        arusaadavalt ja samm-sammult.
-      </p>
+    <h1>Abi ametlike, juriidiliste ja meditsiiniliste dokumentide mõistmisel ja koostamisel</h1>
+
+    <p>
+        Pakun ametlike, juriidiliste ja meditsiiniliste dokumentide sisulist analüüsi,
+        struktureerimist ja korrektset koostamist.
+    </p>
+
+    <p>
+        Teenus on mõeldud inimesele, kellel on konkreetne dokument käes ja kes vajab
+        selgust, loogikat ja korrektset sõnastust – mitte üldist infot ega teooriat.
+    </p>
+
+    <p>
+        Töötan reaalsete dokumentidega, mitte tüüpolukordadega.
+    </p>
+
+    <!-- KELLELE SOBIB / EI SOBI -->
+    <div class="section two-col highlight">
+
+        <div class="col">
+            <h2>Kellele sobib</h2>
+            <ul>
+                <li>kui panused on kõrged</li>
+                <li>kui vajad selgust, mitte oletusi</li>
+                <li>kui tahad teha teadlikke otsuseid</li>
+            </ul>
+        </div>
+
+        <div class="col">
+            <h2>Kellele ei sobi</h2>
+            <ul>
+                <li>kui otsid tasuta või pealiskaudset vastust</li>
+                <li>kui vajad kohtuesindust</li>
+                <li>kui soovid valmis lahendust ilma ise kaasa mõtlemata</li>
+            </ul>
+        </div>
+
     </div>
-    <img alt="Perefoto – kõik põlvkonnad">
-  </div>
-</section>
 
-<section id="teenused">
-  <h2>Teenused ja hinnad</h2>
-  <ul>
-    <li>Selgitan dokumendi sisu arusaadavas keeles</li>
-    <li>Toon välja vastuolud ja ebaselgused</li>
-    <li>Aitan mõista, mida tekst tegelikult tähendab</li>
-    <li>Ei eelda – lähtun ainult dokumendi sisust</li>
-  </ul>
-  <p>
-    Käibemaksu ei lisandu. Tegutsen ettevõtluskonto alusel.
-  </p>
-  <p>
-    Ei paku õigusnõu, ei tee meditsiinilisi diagnoose ega esinda kedagi.
-    Otsused teeb alati klient ise.
-  </p>
-</section>
+    <!-- MINU TAUST -->
+    <div class="section">
+        <h2>Minust / minu taust</h2>
 
-<section id="sobivus">
-  <h2>Kellele see teenus sobib</h2>
-  <ul>
-    <li>Kui panused on kõrged</li>
-    <li>Kui vajad selgust, mitte oletusi</li>
-    <li>Kui tahad teha teadlikke otsuseid</li>
-  </ul>
+        <p>
+            Mul on pikaajaline praktiline kogemus töödes, kus täpsus, korrektsus ja vastutus
+            on vältimatud.
+        </p>
 
-  <h3>Kellele see ei sobi</h3>
-  <ul>
-    <li>Tasuta vastuse otsijatele</li>
-    <li>Kohtuesindamise sooviga inimestele</li>
-    <li>„Tee kõik minu eest“ hoiakuga klientidele</li>
-  </ul>
-</section>
+        <p>Minu taust hõlmab:</p>
+        <ul>
+            <li>raamatupidamise ja dokumentatsiooni tehnilist tööd</li>
+            <li>pangandust ja kliendinõustamist (Swedbank)</li>
+            <li>administreerimist ja asjaajamist keskkondades, kus töötatakse ametlike dokumentide ja tähtaegadega</li>
+        </ul>
 
-<section id="kkk">
-  <h2>KKK</h2>
+        <p>Olen harjunud:</p>
+        <ul>
+            <li>töötama reeglite ja raamistikuga</li>
+            <li>nägema, kus sõnastus ja loogika on kriitilise tähtsusega</li>
+            <li>mõistma, kuidas üks vale lause võib hiljem suuri probleeme tekitada</li>
+        </ul>
 
-  <p><strong>Kas sa annad juriidilist või meditsiinilist nõu?</strong><br>
-  Ei. Ma selgitan dokumenti ega anna erialast nõu.</p>
+        <p><strong>Haridus:</strong></p>
+        <ul>
+            <li>Raamatupidaja – Tallinna Kommertskool</li>
+            <li>Ärikorraldus ja personalitöö – Pärnu Saksa Tehnoloogiakool</li>
+        </ul>
 
-  <p><strong>Kas pean dokumendi ette saatma?</strong><br>
-  Jah. Töötan ainult reaalse dokumendiga, mitte üldiste kirjeldustega.</p>
-</section>
+        <p>
+            Minu kompetents ei põhine teoorial, vaid reaalsel ja vastutusrikkal tööl
+            ametliku infoga.
+        </p>
+    </div>
 
-<section id="minust">
-  <h2>Minust</h2>
-  <p>
-    Olen inimene, kes aitab keerulise teksti muuta arusaadavaks.
-    Lähenen dokumentidele loogiliselt, rahulikult ja sammhaaval.
-  </p>
-</section>
+    <!-- KKK -->
+    <div class="section">
+        <h2>KKK – korduma kippuvad küsimused</h2>
 
-<section id="kontakt">
-  <h2>Kontakt</h2>
-  <p>
-    Kui sul on konkreetne dokument ja soovid sellest aru saada,
-    võta rahulikult ühendust.
-  </p>
-  <p>
-    📧 E-post: <a href="mailto:dokumendianalyys@outlook.com">
-    dokumendianalyys@outlook.com</a>
-  </p>
-</section>
+        <h3>Kas see teenus on tasuta?</h3>
+        <p>Ei. Kõik töö on tasuline, sh esmane analüüs.</p>
 
-<footer>
-  © Dokumendianalyys
-</footer>
+        <h3>Mida tähendab „vaatame dokumendid läbi“?</h3>
+        <p>
+            See tähendab dokumendi sisulist analüüsi:
+        </p>
+        <ul>
+            <li>kas põhjendused on loogilised</li>
+            <li>kas järeldused tulenevad tõenditest</li>
+            <li>kas leidub nõrku kohti, vastuolusid või möödarääkimisi</li>
+        </ul>
+
+        <h3>Kas sa ütled, kas mul on mõtet edasi kaevata?</h3>
+        <p>
+            Ma ei tee otsust sinu eest, kuid selgitan,
+            mida dokument sisuliselt võimaldab ja kus on riskid.
+            Otsuse teeb inimene ise.
+        </p>
+
+        <h3>Kas sa koostad ka kohtusse minevad dokumendid?</h3>
+        <p>
+            Jah, kokkuleppel. Inimene loeb dokumendid enne läbi ja otsustab ise, kas need esitada.
+        </p>
+
+        <h3>Kas see on õigusabi?</h3>
+        <p>
+            Ei. Ma ei anna õigusnõu ega esinda kohtus.
+            Minu töö on sisuline analüüs ja korrektne koostamine.
+        </p>
+
+        <h3>Mille poolest see erineb juturobotist?</h3>
+        <p>
+            Juturobot annab üldist infot.
+            Mina töötan konkreetsete dokumentidega ja otsin sisulisi nõrkusi.
+        </p>
+
+        <h3>Kas pean juba teadma, mida tahan teha?</h3>
+        <p>
+            Ei. Piisab sellest, et sul on dokument käes ja vajad selgust, mitte oletusi.
+        </p>
+    </div>
+
+</header>
 
 </body>
 </html>
