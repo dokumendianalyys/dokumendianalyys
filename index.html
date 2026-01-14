@@ -58,6 +58,20 @@
             color: #0f766e;
             margin-top: 30px;
         }
+
+        /* Üldine ülesehitus */
+        .content {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .text-content {
+            flex: 1;
+        }
+
+        .image-content {
+            flex: 1;
+        }
     </style>
 </head>
 <body>
@@ -75,23 +89,54 @@
 </header>
 
 <section id="avaleht" class="hero">
-    <div class="hero-text">
-        <h1>AMETLIKE, JURIIDILISTE JA MEDITSIINILISTE DOKUMENTIDE SISULINE ANALÜÜS</h1>
-        <p>
-            See teenus on mõeldud inimestele, kellel on käes dokument ja kes vajavad
-            selgust, struktuuri ja korrektset sõnastust – mitte üldist infot ega teooriat.
-        </p>
-        <p>
-            Kui sul on käes ametlik dokument, otsus või menetlusmaterjal ja sa ei saa aru,
-            mida see tegelikult tähendab, siis minu töö on aidata sul sellest aru saada.
-        </p>
-        <p class="cta">
-            Kui dokument tekitab segadust, ära jää üksi. Kui tunned, et ametlik tekst räägib sinust mööda, siis on see täpselt see koht, kus ma saan aidata.
-        </p>
-    </div>
+    <div class="content">
+        <!-- Tekst vasakul -->
+        <div class="text-content">
+            <h1>AMETLIKE, JURIIDILISTE JA MEDITSIINILISTE DOKUMENTIDE SISULINE ANALÜÜS</h1>
+            <p>
+                See teenus on mõeldud inimestele, kellel on käes dokument ja kes vajavad
+                selgust, struktuuri ja korrektset sõnastust, mitte üldist infot või teooriat.
+            </p>
+            <p>
+                Töötan konkreetsete dokumentidega, mitte tüüpolukordadega. Kui sul on käes ametlik dokument, otsus või menetlusmaterjal
+                ja sa ei saa aru, mida see tegelikult tähendab, siis minu töö on aidata sul sellest aru saada.
+            </p>
+            <p>
+                Ma analüüsin dokumente sisuliselt:
+                <ul>
+                    <li>kas põhjendused on loogilised</li>
+                    <li>kas järeldused tulenevad tõenditest</li>
+                    <li>kus on vastuolud, lüngad või nõrgad kohad</li>
+                </ul>
+            </p>
+            <p>
+                See ei ole tasuta teenus ega pealiskaudne ülevaade. See on töö, mille eesmärk on selgus, mis selles dokumendis täpselt öeldakse.
+            </p>
+            <p>
+                <strong>KELLELE SEE SOBIB / EI SOBI</strong><br>
+                <strong>SOBIB</strong>
+                <ul>
+                    <li>kui panused on kõrged</li>
+                    <li>kui vajad selgust, mitte oletusi</li>
+                    <li>kui tahad teha teadlikke otsuseid</li>
+                    <li>kui sul on dokument olemas ja küsimused peas</li>
+                </ul>
+                <strong>EI SOBI</strong>
+                <ul>
+                    <li>kui otsid tasuta või pealiskaudset vastust</li>
+                    <li>kui vajad kohtuesindust</li>
+                    <li>kui soovid valmis lahendust ilma ise kaasa mõtlemata</li>
+                </ul>
+            </p>
+            <p>
+                Kui tunned, et dokument, mis sul käes on, ei ole asi, mida tahaksid ise katsetada, oled tõenäoliselt õiges kohas.
+            </p>
+        </div>
 
-    <div class="hero-image">
-        <img src="images/pere-avaleht.jpg" alt="Kolme põlvkonna pere">
+        <!-- Pilt paremal -->
+        <div class="image-content">
+            <img src="images/327a1b31-af70-47c6-91c1-8e9ebf0b722c.png" alt="Kolme põlvkonna pere">
+        </div>
     </div>
 </section>
 
