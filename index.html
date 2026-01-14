@@ -1,96 +1,109 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ametlike dokumentide sisuline analüüs</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ametlike dokumentide sisuline analüüs</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #1f2937;
+        }
 
-    .top-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 40px;
-      border-bottom: 1px solid #ddd;
-    }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 40px;
+            border-bottom: 1px solid #ddd;
+        }
 
-    .top-nav nav a {
-      margin-left: 24px;
-      text-decoration: none;
-      color: #000;
-      font-weight: 500;
-    }
+        .top-nav nav a {
+            margin-left: 24px;
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+        }
 
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 60px 40px;
-      gap: 40px;
-    }
+        .top-nav nav a:hover {
+            color: #0f766e;
+        }
 
-    .hero-text {
-      flex: 1;
-    }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 40px;
+            gap: 40px;
+        }
 
-    .hero-image {
-      flex: 1;
-    }
+        .hero-text {
+            flex: 1;
+        }
 
-    .hero-image img {
-      width: 100%;
-      border-radius: 16px;
-    }
+        .hero-image {
+            flex: 1;
+        }
 
-    h1 {
-      font-size: 32px;
-      margin-bottom: 16px;
-    }
+        .hero-image img {
+            width: 100%;
+            border-radius: 16px;
+        }
 
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
 
-    .top-nav nav a:hover {
-      color: #0f766e;
-    }
-  </style>
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .cta {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0f766e;
+            margin-top: 30px;
+        }
+
+    </style>
 </head>
 <body>
 
 <header class="top-nav">
-  <div class="logo">Dokumendiselgus</div>
-  <nav>
-    <a href="#avaleht">Avaleht</a>
-    <a href="#mida-ma-teen">Mida ma teen</a>
-    <a href="#teenused">Teenused ja hinnad</a>
-    <a href="#minust">Minust</a>
-    <a href="#kkk">KKK</a>
-    <a href="#kontakt">Kontakt</a>
-  </nav>
+    <div class="logo">Dokumendiselgus</div>
+    <nav>
+        <a href="#avaleht">Avaleht</a>
+        <a href="#mida-ma-teen">Mida ma teen</a>
+        <a href="#teenused">Teenused ja hinnad</a>
+        <a href="#minust">Minust</a>
+        <a href="#kkk">KKK</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
 </header>
 
 <section id="avaleht" class="hero">
-  <div class="hero-text">
-    <h1>AMETLIKE, JURIIDILISTE JA MEDITSIINILISTE DOKUMENTIDE SISULINE ANALÜÜS</h1>
-    <p>
-      See teenus on mõeldud inimestele, kellel on käes dokument ja kes vajavad
-      selgust, struktuuri ja korrektset sõnastust – mitte üldist infot ega teooriat.
-    </p>
-    <p>
-      Kui sul on käes ametlik dokument, otsus või menetlusmaterjal ja sa ei saa aru,
-      mida see tegelikult tähendab, siis minu töö on aidata sul sellest aru saada.
-    </p>
-  </div>
+    <div class="hero-text">
+        <h1>AMETLIKE, JURIIDILISTE JA MEDITSIINILISTE DOKUMENTIDE SISULINE ANALÜÜS</h1>
+        <p>
+            See teenus on mõeldud inimestele, kellel on käes dokument ja kes vajavad
+            selgust, struktuuri ja korrektset sõnastust – mitte üldist infot ega teooriat.
+        </p>
+        <p>
+            Kui sul on käes ametlik dokument, otsus või menetlusmaterjal ja sa ei saa aru,
+            mida see tegelikult tähendab, siis minu töö on aidata sul sellest aru saada.
+        </p>
+        <p class="cta">
+            Kui dokument tekitab segadust, ära jää üksi. Kui tunned, et ametlik tekst räägib sinust mööda, siis on see täpselt see koht, kus ma saan aidata.
+        </p>
+    </div>
 
-  <div class="hero-image">
-    <img src="images/pere-avaleht.jpg" alt="Kolme põlvkonna pere">
-  </div>
+    <div class="hero-image">
+        <img src="images/pere-avaleht.jpg" alt="Kolme põlvkonna pere">
+    </div>
 </section>
 
 </body>
